@@ -40,16 +40,17 @@ function Navbar() {
                             {link.label}
                         </Link>
                     ))}
-                    <a
-                        href="https://wa.me/905301764835"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="navbar-whatsapp"
-                        aria-label="WhatsApp"
-                    >
-                        <Icon name="whatsapp" size={28} />
-                    </a>
                 </div>
+
+                <a
+                    href="https://wa.me/905301764835"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="navbar-whatsapp"
+                    aria-label="WhatsApp"
+                >
+                    <Icon name="whatsapp" size={28} />
+                </a>
 
                 <button
                     className="mobile-menu-btn"
