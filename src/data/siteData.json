@@ -5,12 +5,12 @@
         "description": "Markanızı dijital dünyada zirveye taşıyoruz."
     },
     "colors": {
-        "primary": "#1E4345",
-        "primaryDark": "#004F4A",
-        "primaryLight": "#399091",
+        "primary": "#21A81D",
+        "primaryDark": "#006B25",
+        "primaryLight": "#4BC740",
         "primaryLighter": "#E9F5F4",
-        "accent": "#055250",
-        "accentDark": "#00373B",
+        "accent": "#006722",
+        "accentDark": "#00381E",
         "bgLight": "#F5FAF7",
         "bgWhite": "#FFFFFF",
         "bgDark": "#1A2E25",

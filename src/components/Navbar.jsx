@@ -26,7 +26,7 @@ function Navbar() {
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container">
                 <Link to="/" className="navbar-logo">
-                    <span>AkgulMedya</span>
+                    <img src="/images/logo.png" alt="AkgulMedya" className="logo-img" />
                 </Link>
 
                 <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>

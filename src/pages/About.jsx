@@ -1,6 +1,8 @@
 import { useInView } from '../hooks/useInView'
 import { Link } from 'react-router-dom'
 import siteData from '../data/siteData.json'
+import WaveBackground from '../components/WaveBackground'
+import Icon from '../components/Icon'
 import './About.css'
 
 function About() {
@@ -16,21 +18,14 @@ function About() {
             {/* Hero Section */}
             <section
                 ref={heroRef}
-                className={`about-hero ${heroVisible ? 'visible' : ''}`}
+                className={`about-hero wave-hero ${heroVisible ? 'visible' : ''}`}
             >
-                <div className="about-hero-bg">
-                    <div className="about-hero-gradient"></div>
-                    <div className="about-hero-shapes">
-                        <div className="shape shape-1"></div>
-                        <div className="shape shape-2"></div>
-                        <div className="shape shape-3"></div>
-                    </div>
-                </div>
+                <WaveBackground />
                 <div className="container">
                     <div className="about-hero-content">
-                        <span className="section-label reveal stagger-1">{hero.label}</span>
-                        <h1 className="reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}></h1>
-                        <p className="reveal stagger-3">{hero.description}</p>
+                        <span className="section-label hero-label-light reveal stagger-1">{hero.label}</span>
+                        <h1 className="hero-title-light reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}></h1>
+                        <p className="hero-description-light reveal stagger-3">{hero.description}</p>
                     </div>
                 </div>
             </section>
@@ -50,18 +45,10 @@ function About() {
                                     {item}
                                 </p>
                             ))}
-                            <div className="story-stats reveal stagger-5">
-                                {story.stats.map((stat, index) => (
-                                    <div key={index} className="story-stat">
-                                        <span className="stat-number">{stat.number}</span>
-                                        <span className="stat-text">{stat.text}</span>
-                                    </div>
-                                ))}
-                            </div>
                         </div>
                         <div className="story-visual reveal stagger-3">
                             <div className="story-image-placeholder">
-                                <div className="placeholder-icon">🏢</div>
+                                <Icon name="briefcase" size={48} strokeWidth={1.5} />
                                 <span>{siteData.siteInfo.name}</span>
                             </div>
                         </div>
@@ -86,7 +73,9 @@ function About() {
                                 key={index}
                                 className={`why-us-card reveal stagger-${(index % 3) + 1}`}
                             >
-                                <div className="why-us-icon">{item.icon}</div>
+                                <div className="why-us-icon">
+                                    <Icon name={item.icon} size={32} strokeWidth={1.5} />
+                                </div>
                                 <h4>{item.title}</h4>
                                 <p>{item.description}</p>
                             </div>
@@ -111,7 +100,9 @@ function About() {
                                 key={index}
                                 className={`value-card reveal stagger-${index + 1}`}
                             >
-                                <div className="value-icon">{value.icon}</div>
+                                <div className="value-icon">
+                                    <Icon name={value.icon} size={32} strokeWidth={1.5} />
+                                </div>
                                 <h4>{value.title}</h4>
                                 <p>{value.description}</p>
                             </div>

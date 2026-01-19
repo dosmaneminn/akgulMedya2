@@ -18,8 +18,8 @@ function Footer() {
                 <div className="footer-content">
                     {/* Brand Section */}
                     <div className="footer-brand">
-                        <Link to="/" className="navbar-logo">
-                            <span>{siteData.siteInfo.name}</span>
+                        <Link to="/" className="footer-logo">
+                            <img src="/images/logo-yazisiz.png" alt="AkgulMedya" className="footer-logo-img" />
                         </Link>
                         <p>{siteData.siteInfo.description}</p>
                     </div>

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useInView } from '../hooks/useInView'
 import siteData from '../data/siteData.json'
 import Icon from '../components/Icon'
+import WaveBackground from '../components/WaveBackground'
 import './Contact.css'
 
 function Contact() {
@@ -57,17 +58,15 @@ function Contact() {
             {/* Hero Section */}
             <section
                 ref={heroRef}
-                className={`contact-hero ${heroVisible ? 'visible' : ''}`}
+                className={`contact-hero wave-hero ${heroVisible ? 'visible' : ''}`}
             >
-                <div className="contact-hero-bg">
-                    <div className="contact-hero-gradient"></div>
-                </div>
+                <WaveBackground />
                 <div className="container">
                     <div className="contact-hero-content">
-                        <span className="section-label reveal stagger-1">{hero.label}</span>
-                        <h1 className="reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}>
+                        <span className="section-label hero-label-light reveal stagger-1">{hero.label}</span>
+                        <h1 className="hero-title-light reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}>
                         </h1>
-                        <p className="reveal stagger-3">
+                        <p className="hero-description-light reveal stagger-3">
                             {hero.description}
                         </p>
                     </div>

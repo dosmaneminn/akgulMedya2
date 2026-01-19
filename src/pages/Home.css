@@ -10,6 +10,90 @@
     padding-top: 80px;
 }
 
+/* Wave Hero Styles */
+.wave-hero {
+    background: transparent;
+}
+
+.wave-hero .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-label-light {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-title-light {
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title-light .highlight {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-decoration: underline;
+    text-decoration-color: #39FF14;
+    text-decoration-thickness: 3px;
+    background: none;
+}
+
+.hero-description-light {
+    color: #FFFFFF !important;
+    opacity: 0.95;
+}
+
+.btn-light {
+    background: #FFFFFF;
+    color: #43A047;
+    font-weight: 700;
+}
+
+.btn-light:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-light-outline {
+    background: transparent;
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF;
+}
+
+.btn-light-outline:hover {
+    background: #FFFFFF;
+    color: #43A047 !important;
+    transform: translateY(-2px);
+}
+
+.btn-light:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+.btn-light-outline {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: var(--text-light);
+}
+
+.btn-light-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-light);
+}
+
+.hero-scroll-light {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-scroll-light .scroll-arrow {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
 .hero-background {
     position: absolute;
     top: 0;

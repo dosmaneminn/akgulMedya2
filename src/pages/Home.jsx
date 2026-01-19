@@ -3,6 +3,7 @@ import { useInView } from '../hooks/useInView'
 import Marquee from '../components/Marquee'
 import ServiceCard from '../components/ServiceCard'
 import Icon from '../components/Icon'
+import WaveBackground from '../components/WaveBackground'
 import siteData from '../data/siteData.json'
 import './Home.css'
 
@@ -20,36 +21,28 @@ function Home() {
             {/* Hero Section */}
             <section
                 ref={heroRef}
-                className={`hero-section ${heroVisible ? 'visible' : ''}`}
+                className={`hero-section wave-hero ${heroVisible ? 'visible' : ''}`}
             >
-                <div className="hero-background">
-                    <div className="hero-gradient"></div>
-                    <div className="hero-pattern"></div>
-                </div>
+                <WaveBackground />
                 <div className="container hero-content">
                     <div className="hero-text">
-                        <span className="hero-label reveal stagger-1">{hero.label}</span>
-                        <h1 className="hero-title reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}></h1>
-                        <p className="hero-description reveal stagger-3">
+                        <span className="hero-label hero-label-light reveal stagger-1">{hero.label}</span>
+                        <h1 className="hero-title hero-title-light reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}></h1>
+                        <p className="hero-description hero-description-light reveal stagger-3">
                             {hero.description}
                         </p>
                         <div className="hero-buttons reveal stagger-4">
-                            <Link to="/hizmetlerimiz" className="btn btn-primary">
+                            <Link to="/hizmetlerimiz" className="btn btn-primary btn-light">
                                 {hero.button1}
                                 <span className="btn-arrow">→</span>
                             </Link>
-                            <Link to="/iletisim" className="btn btn-secondary">
+                            <Link to="/iletisim" className="btn btn-secondary btn-light-outline">
                                 {hero.button2}
                             </Link>
                         </div>
                     </div>
-                    <div className="hero-visual reveal stagger-5">
-                        <div className="hero-shape hero-shape-1"></div>
-                        <div className="hero-shape hero-shape-2"></div>
-                        <div className="hero-shape hero-shape-3"></div>
-                    </div>
                 </div>
-                <div className="hero-scroll-indicator">
+                <div className="hero-scroll-indicator hero-scroll-light">
                     <span>Aşağı Kaydır</span>
                     <div className="scroll-arrow"></div>
                 </div>
