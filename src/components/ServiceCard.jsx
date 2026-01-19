@@ -1,4 +1,5 @@
 import useInView from '../hooks/useInView'
+import Icon from './Icon'
 import './ServiceCard.css'
 
 function ServiceCard({ icon, title, description, delay = 1 }) {
@@ -11,7 +12,7 @@ function ServiceCard({ icon, title, description, delay = 1 }) {
             style={{ transitionDelay: `${delay * 0.1}s` }}
         >
             <div className="service-card-icon">
-                {icon}
+                <Icon name={icon} size={32} strokeWidth={1.5} />
             </div>
             <h3 className="service-card-title">{title}</h3>
             <p className="service-card-description">{description}</p>
@@ -25,3 +26,4 @@ function ServiceCard({ icon, title, description, delay = 1 }) {
 }
 
 export default ServiceCard
+

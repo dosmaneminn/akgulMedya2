@@ -1,0 +1,381 @@
+{
+    "siteInfo": {
+        "name": "AkgulMedya",
+        "title": "Dijital Ajans",
+        "description": "Markanızı dijital dünyada zirveye taşıyoruz."
+    },
+    "colors": {
+        "primary": "#1E4345",
+        "primaryDark": "#004F4A",
+        "primaryLight": "#399091",
+        "primaryLighter": "#E9F5F4",
+        "accent": "#055250",
+        "accentDark": "#00373B",
+        "bgLight": "#F5FAF7",
+        "bgWhite": "#FFFFFF",
+        "bgDark": "#1A2E25",
+        "bgDarker": "#0F1D17",
+        "textDark": "#1A2E25",
+        "textMedium": "#4A5D55",
+        "textLight": "#FFFFFF",
+        "textMuted": "#8A9A92"
+    },
+    "navigation": [
+        {
+            "path": "/",
+            "label": "Ana Sayfa"
+        },
+        {
+            "path": "/hakkimizda",
+            "label": "Hakkımızda"
+        },
+        {
+            "path": "/hizmetlerimiz",
+            "label": "Hizmetlerimiz"
+        },
+        {
+            "path": "/isbirliklerimiz",
+            "label": "İşbirliklerimiz"
+        },
+        {
+            "path": "/iletisim",
+            "label": "İletişim"
+        }
+    ],
+    "services": [
+        {
+            "id": "qr-menu",
+            "icon": "qr-code",
+            "title": "QR Menü",
+            "description": "Restoranlar ve kafeler için modern, interaktif QR menü çözümleri sunuyoruz."
+        },
+        {
+            "id": "drone",
+            "icon": "drone",
+            "title": "Drone Çekimi",
+            "description": "Profesyonel drone ile havadan çekim hizmetleri, etkileyici görüntüler."
+        },
+        {
+            "id": "web-design",
+            "icon": "globe",
+            "title": "Web Tasarımı",
+            "description": "Modern, responsive ve kullanıcı dostu web siteleri tasarlıyoruz."
+        },
+        {
+            "id": "production",
+            "icon": "video",
+            "title": "Prodüksiyon",
+            "description": "Profesyonel video prodüksiyon, kurgu ve post-prodüksiyon hizmetleri."
+        },
+        {
+            "id": "n8n-automation",
+            "icon": "workflow",
+            "title": "N8N Otomasyonları",
+            "description": "İş süreçlerinizi otomatikleştiren n8n workflow çözümleri."
+        },
+        {
+            "id": "photo-video",
+            "icon": "camera",
+            "title": "Fotoğraf & Video Çekimi",
+            "description": "Profesyonel fotoğraf ve video çekimi hizmetleri."
+        },
+        {
+            "id": "social-media",
+            "icon": "share",
+            "title": "Sosyal Medya Yönetimi",
+            "description": "Sosyal medya hesaplarınızı profesyonel olarak yönetiyoruz."
+        },
+        {
+            "id": "meta-ads",
+            "icon": "megaphone",
+            "title": "Meta Reklamları",
+            "description": "Facebook ve Instagram reklam kampanyaları ile hedef kitlenize ulaşın."
+        },
+        {
+            "id": "seo",
+            "icon": "search",
+            "title": "SEO",
+            "description": "Arama motoru optimizasyonu ile organik trafiğinizi artırıyoruz."
+        },
+        {
+            "id": "google-reviews",
+            "icon": "star",
+            "title": "Google Yorum Desteği",
+            "description": "Google işletme profilinizi güçlendirin, yorum stratejisi oluşturun."
+        },
+        {
+            "id": "logo-design",
+            "icon": "pen-tool",
+            "title": "Logo Tasarımı",
+            "description": "Markanızı yansıtan özgün ve profesyonel logo tasarımları."
+        },
+        {
+            "id": "brand-management",
+            "icon": "briefcase",
+            "title": "Marka Yönetimi",
+            "description": "Marka stratejisi, konumlandırma ve kurumsal kimlik yönetimi."
+        }
+    ],
+    "contact": {
+        "address": {
+            "title": "Adres",
+            "content": "İstanbul, Türkiye",
+            "icon": "map-pin"
+        },
+        "email": {
+            "title": "E-posta",
+            "content": "info@akgulmedya.com",
+            "link": "mailto:info@akgulmedya.com",
+            "icon": "mail"
+        },
+        "phone": {
+            "title": "Telefon",
+            "content": "+90 (555) 123 45 67",
+            "link": "tel:+905551234567",
+            "icon": "phone"
+        },
+        "whatsapp": {
+            "title": "WhatsApp",
+            "content": "+90 (555) 123 45 67",
+            "link": "https://wa.me/905551234567",
+            "icon": "whatsapp"
+        },
+        "hours": {
+            "title": "Çalışma Saatleri",
+            "content": "Pazartesi - Cuma: 09:00 - 18:00",
+            "icon": "clock"
+        }
+    },
+    "social": [
+        {
+            "name": "WhatsApp",
+            "icon": "whatsapp",
+            "url": "https://wa.me/905551234567"
+        },
+        {
+            "name": "Instagram",
+            "icon": "instagram",
+            "url": "#"
+        },
+        {
+            "name": "Facebook",
+            "icon": "facebook",
+            "url": "#"
+        },
+        {
+            "name": "Twitter",
+            "icon": "twitter",
+            "url": "#"
+        },
+        {
+            "name": "LinkedIn",
+            "icon": "linkedin",
+            "url": "#"
+        }
+    ],
+    "pages": {
+        "home": {
+            "hero": {
+                "label": "Dijital Ajans",
+                "title": "Markanızı <span class=\"highlight\">Dijitalde</span> Zirveye Taşıyoruz",
+                "description": "Yaratıcı çözümler ve stratejik yaklaşımlarla işletmenizi dijital dünyada bir adım öne çıkarıyoruz.",
+                "button1": "Hizmetlerimiz",
+                "button2": "İletişime Geç"
+            },
+            "marquee": [
+                "QR Menü",
+                "Drone Çekimi",
+                "Web Tasarımı",
+                "Prodüksiyon",
+                "N8N Otomasyonları",
+                "Sosyal Medya"
+            ],
+            "aboutPreview": {
+                "label": "Hakkımızda",
+                "title": "Dijital Dönüşümünüzde Yanınızdayız",
+                "description": "AkgulMedya olarak, markaların dijital dünyada güçlü bir varlık oluşturmasına yardımcı oluyoruz. Uzman ekibimiz ile yaratıcı ve stratejik çözümler sunuyoruz.",
+                "button": "Daha Fazla Bilgi",
+                "cards": [
+                    {
+                        "icon": "zap",
+                        "title": "Hızlı & Etkili",
+                        "description": "Projelerinizi zamanında ve kaliteli teslim ediyoruz."
+                    },
+                    {
+                        "icon": "lightbulb",
+                        "title": "Yaratıcı Çözümler",
+                        "description": "Özgün fikirlerle markanızı öne çıkarıyoruz."
+                    }
+                ]
+            },
+            "servicesPreview": {
+                "label": "Hizmetlerimiz",
+                "title": "Neler Yapıyoruz?",
+                "description": "Dijital dünyada başarıya ulaşmanız için ihtiyacınız olan tüm hizmetleri sunuyoruz.",
+                "button": "Tüm Hizmetleri Gör"
+            },
+            "cta": {
+                "title": "Projenizi Hayata Geçirelim",
+                "description": "Dijital dönüşüm yolculuğunuzda size rehberlik etmek için buradayız.",
+                "button": "Hemen İletişime Geç"
+            }
+        },
+        "about": {
+            "hero": {
+                "label": "Hakkımızda",
+                "title": "Dijital Dünyada <span class=\"highlight\">Güçlü</span> Bir Varlık",
+                "description": "AkgulMedya olarak, markaların dijital dünyada başarılı olmaları için gereken tüm hizmetleri sunuyoruz."
+            },
+            "story": {
+                "label": "Hikayemiz",
+                "title": "Dijital Yolculuğumuz",
+                "items": [
+                    "AkgulMedya, dijital pazarlama ve web tasarım alanında uzmanlaşmış bir ajans olarak yola çıktı. Amacımız, işletmelerin dijital dünyada güçlü bir varlık oluşturmasına yardımcı olmaktır.",
+                    "Uzman ekibimiz, yaratıcı tasarımlar, etkili pazarlama stratejileri ve modern teknolojiler kullanarak müşterilerimize en iyi sonuçları sunmak için çalışmaktadır."
+                ],
+                "stats": []
+            },
+            "whyUs": {
+                "label": "Neden Biz?",
+                "title": "Neden AkgulMedya?",
+                "description": "Bizi farklı kılan özelliklerimizi keşfedin",
+                "items": [
+                    {
+                        "icon": "target",
+                        "title": "Stratejik Yaklaşım",
+                        "description": "Her projeye özel stratejiler geliştiriyor, hedeflerinize uygun çözümler sunuyoruz."
+                    },
+                    {
+                        "icon": "lightbulb",
+                        "title": "Yaratıcı Ekip",
+                        "description": "Deneyimli ve yaratıcı ekibimiz ile özgün fikirler üretiyoruz."
+                    },
+                    {
+                        "icon": "zap",
+                        "title": "Hızlı Teslimat",
+                        "description": "Projelerinizi zamanında ve kaliteli bir şekilde teslim ediyoruz."
+                    },
+                    {
+                        "icon": "bar-chart",
+                        "title": "Ölçülebilir Sonuçlar",
+                        "description": "Veriye dayalı yaklaşımlarla başarıyı ölçüyor ve raporluyoruz."
+                    },
+                    {
+                        "icon": "users",
+                        "title": "İş Ortaklığı",
+                        "description": "Müşterilerimizle uzun vadeli iş ortaklıkları kuruyoruz."
+                    },
+                    {
+                        "icon": "shield",
+                        "title": "Güvenilirlik",
+                        "description": "Tüm projelerimizde şeffaflık ve güvenilirliği ön planda tutuyoruz."
+                    }
+                ]
+            },
+            "values": {
+                "label": "Değerlerimiz",
+                "title": "Temel Değerlerimiz",
+                "items": [
+                    {
+                        "icon": "sparkles",
+                        "title": "Yenilikçilik",
+                        "description": "Sürekli gelişen teknolojileri takip ediyor ve uyguluyoruz."
+                    },
+                    {
+                        "icon": "palette",
+                        "title": "Yaratıcılık",
+                        "description": "Özgün tasarımlar ve fikirlerle fark yaratıyoruz."
+                    },
+                    {
+                        "icon": "award",
+                        "title": "Profesyonellik",
+                        "description": "Her projede en yüksek kalite standartlarını sağlıyoruz."
+                    },
+                    {
+                        "icon": "heart",
+                        "title": "Tutku",
+                        "description": "İşimizi sevgiyle ve tutkuyla yapıyoruz."
+                    }
+                ]
+            },
+            "cta": {
+                "title": "Projeniz İçin Hazırız",
+                "description": "Dijital dönüşüm yolculuğunuzda yanınızda olmak istiyoruz.",
+                "button": "İletişime Geç"
+            }
+        },
+        "services": {
+            "hero": {
+                "label": "Hizmetlerimiz",
+                "title": "Dijital <span class=\"highlight\">Çözümlerimiz</span>",
+                "description": "İşletmenizin dijital dünyada başarılı olması için ihtiyacınız olan tüm hizmetleri sunuyoruz."
+            },
+            "cta": {
+                "title": "Projeniz İçin Hazırız",
+                "description": "Hangi hizmet size uygun olursa olsun, size özel çözümler sunmak için buradayız.",
+                "button": "Hemen İletişime Geç"
+            }
+        },
+        "partnerships": {
+            "hero": {
+                "label": "İşbirliklerimiz",
+                "title": "Güçlü <span class=\"highlight\">İş Ortaklıkları</span>",
+                "description": "Birlikte çalıştığımız değerli markalar ve başarılı projelerimiz"
+            },
+            "partners": {
+                "label": "Referanslarımız",
+                "title": "Çalıştığımız Markalar",
+                "description": "Güvenilir iş ortaklarımızla birlikte başarılı projeler gerçekleştirdik",
+                "items": [
+                    {
+                        "name": "MEZECİM",
+                        "image": "/images/mezecim.jpeg"
+                    },
+                    {
+                        "name": "ALP ŞARKÜTERİ",
+                        "image": "/images/alp-sarkuteri.jpeg"
+                    },
+                    {
+                        "name": "BALFI TOKEN",
+                        "image": "/images/balfi-token.jpeg"
+                    },
+                    {
+                        "name": "LUMELLA DESIGN",
+                        "image": "/images/lumella-design.jpeg"
+                    },
+                    {
+                        "name": "ATA SAAT",
+                        "image": "/images/ata-saat.jpeg"
+                    },
+                    {
+                        "name": "SEVGİ CEMBERİ DERSHANESİ",
+                        "image": "/images/sevgi-cemberi-dershanesi.jpeg"
+                    }
+                ]
+            },
+            "stats": [],
+            "cta": {
+                "title": "Siz de İş Ortaklarımız Arasına Katılın",
+                "description": "Birlikte harika işler başarabiliriz.",
+                "button": "İletişime Geç"
+            }
+        },
+        "contact": {
+            "hero": {
+                "label": "İletişim",
+                "title": "Bizimle <span class=\"highlight\">İletişime</span> Geçin",
+                "description": "Projeleriniz hakkında konuşmak, sorularınızı yanıtlamak veya teklif almak için bize ulaşın."
+            },
+            "form": {
+                "title": "Mesaj Gönderin",
+                "description": "Formu doldurarak bize ulaşabilirsiniz. En kısa sürede size dönüş yapacağız.",
+                "button": "Mesaj Gönder"
+            },
+            "info": {
+                "title": "İletişim Bilgileri",
+                "description": "Bize doğrudan ulaşmak için aşağıdaki iletişim bilgilerini kullanabilirsiniz.",
+                "socialTitle": "Sosyal Medya"
+            }
+        }
+    }
+}

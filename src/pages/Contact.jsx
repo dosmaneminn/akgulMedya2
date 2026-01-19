@@ -1,11 +1,17 @@
 import { useState } from 'react'
 import { useInView } from '../hooks/useInView'
+import siteData from '../data/siteData.json'
+import Icon from '../components/Icon'
 import './Contact.css'
 
 function Contact() {
     const [heroRef, heroVisible] = useInView({ threshold: 0.1 })
     const [formRef, formVisible] = useInView({ threshold: 0.1 })
     const [infoRef, infoVisible] = useInView({ threshold: 0.1 })
+
+    const { hero, form, info } = siteData.pages.contact
+    const contact = siteData.contact
+    const socialLinks = siteData.social
 
     const [formData, setFormData] = useState({
         name: '',
@@ -46,40 +52,6 @@ function Contact() {
         setTimeout(() => setIsSubmitted(false), 3000)
     }
 
-    const contactInfo = [
-        {
-            icon: '📍',
-            title: 'Adres',
-            content: 'İstanbul, Türkiye',
-            link: null
-        },
-        {
-            icon: '📧',
-            title: 'E-posta',
-            content: 'info@akgulmedya.com',
-            link: 'mailto:info@akgulmedya.com'
-        },
-        {
-            icon: '📱',
-            title: 'Telefon',
-            content: '+90 (555) 123 45 67',
-            link: 'tel:+905551234567'
-        },
-        {
-            icon: '🕐',
-            title: 'Çalışma Saatleri',
-            content: 'Pazartesi - Cuma: 09:00 - 18:00',
-            link: null
-        }
-    ]
-
-    const socialLinks = [
-        { icon: '📸', name: 'Instagram', url: '#' },
-        { icon: '👍', name: 'Facebook', url: '#' },
-        { icon: '🐦', name: 'Twitter', url: '#' },
-        { icon: '💼', name: 'LinkedIn', url: '#' }
-    ]
-
     return (
         <div className="contact-page">
             {/* Hero Section */}
@@ -92,13 +64,11 @@ function Contact() {
                 </div>
                 <div className="container">
                     <div className="contact-hero-content">
-                        <span className="section-label reveal stagger-1">İletişim</span>
-                        <h1 className="reveal stagger-2">
-                            Bizimle <span className="highlight">İletişime</span> Geçin
+                        <span className="section-label reveal stagger-1">{hero.label}</span>
+                        <h1 className="reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}>
                         </h1>
                         <p className="reveal stagger-3">
-                            Projeleriniz hakkında konuşmak, sorularınızı yanıtlamak veya
-                            teklif almak için bize ulaşın.
+                            {hero.description}
                         </p>
                     </div>
                 </div>
@@ -113,9 +83,9 @@ function Contact() {
                             ref={formRef}
                             className={`contact-form-wrapper ${formVisible ? 'visible' : ''}`}
                         >
-                            <h2 className="reveal stagger-1">Mesaj Gönderin</h2>
+                            <h2 className="reveal stagger-1">{form.title}</h2>
                             <p className="reveal stagger-2">
-                                Formu doldurarak bize ulaşabilirsiniz. En kısa sürede size dönüş yapacağız.
+                                {form.description}
                             </p>
 
                             {isSubmitted && (
@@ -208,7 +178,7 @@ function Contact() {
                                         </>
                                     ) : (
                                         <>
-                                            Mesaj Gönder
+                                            {form.button}
                                             <span className="btn-arrow">→</span>
                                         </>
                                     )}
@@ -221,24 +191,24 @@ function Contact() {
                             ref={infoRef}
                             className={`contact-info-wrapper ${infoVisible ? 'visible' : ''}`}
                         >
-                            <h2 className="reveal stagger-1">İletişim Bilgileri</h2>
+                            <h2 className="reveal stagger-1">{info.title}</h2>
                             <p className="reveal stagger-2">
-                                Bize doğrudan ulaşmak için aşağıdaki iletişim bilgilerini kullanabilirsiniz.
+                                {info.description}
                             </p>
 
                             <div className="contact-info-list">
-                                {contactInfo.map((info, index) => (
+                                {Object.values(contact).map((item, index) => (
                                     <div
                                         key={index}
                                         className={`contact-info-item reveal stagger-${index + 1}`}
                                     >
-                                        <div className="info-icon">{info.icon}</div>
+                                        <div className="info-icon"><Icon name={item.icon} size={24} strokeWidth={1.5} /></div>
                                         <div className="info-content">
-                                            <h4>{info.title}</h4>
-                                            {info.link ? (
-                                                <a href={info.link}>{info.content}</a>
+                                            <h4>{item.title}</h4>
+                                            {item.link ? (
+                                                <a href={item.link}>{item.content}</a>
                                             ) : (
-                                                <p>{info.content}</p>
+                                                <p>{item.content}</p>
                                             )}
                                         </div>
                                     </div>
@@ -246,7 +216,7 @@ function Contact() {
                             </div>
 
                             <div className="social-links reveal stagger-5">
-                                <h4>Sosyal Medya</h4>
+                                <h4>{info.socialTitle}</h4>
                                 <div className="social-icons">
                                     {socialLinks.map((social, index) => (
                                         <a
@@ -255,7 +225,7 @@ function Contact() {
                                             className="social-icon"
                                             title={social.name}
                                         >
-                                            {social.icon}
+                                            <Icon name={social.icon} size={22} strokeWidth={1.5} />
                                         </a>
                                     ))}
                                 </div>

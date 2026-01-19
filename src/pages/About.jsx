@@ -1,5 +1,6 @@
 import { useInView } from '../hooks/useInView'
 import { Link } from 'react-router-dom'
+import siteData from '../data/siteData.json'
 import './About.css'
 
 function About() {
@@ -8,45 +9,7 @@ function About() {
     const [whyUsRef, whyUsVisible] = useInView({ threshold: 0.1 })
     const [valuesRef, valuesVisible] = useInView({ threshold: 0.1 })
 
-    const whyUsItems = [
-        {
-            icon: '🎯',
-            title: 'Stratejik Yaklaşım',
-            description: 'Her projeye özel stratejiler geliştiriyor, hedeflerinize uygun çözümler sunuyoruz.'
-        },
-        {
-            icon: '💡',
-            title: 'Yaratıcı Ekip',
-            description: 'Deneyimli ve yaratıcı ekibimiz ile özgün fikirler üretiyoruz.'
-        },
-        {
-            icon: '🚀',
-            title: 'Hızlı Teslimat',
-            description: 'Projelerinizi zamanında ve kaliteli bir şekilde teslim ediyoruz.'
-        },
-        {
-            icon: '📊',
-            title: 'Ölçülebilir Sonuçlar',
-            description: 'Veriye dayalı yaklaşımlarla başarıyı ölçüyor ve raporluyoruz.'
-        },
-        {
-            icon: '🤝',
-            title: 'İş Ortaklığı',
-            description: 'Müşterilerimizle uzun vadeli iş ortaklıkları kuruyoruz.'
-        },
-        {
-            icon: '🔒',
-            title: 'Güvenilirlik',
-            description: 'Tüm projelerimizde şeffaflık ve güvenilirliği ön planda tutuyoruz.'
-        }
-    ]
-
-    const values = [
-        { icon: '✨', title: 'Yenilikçilik', description: 'Sürekli gelişen teknolojileri takip ediyor ve uyguluyoruz.' },
-        { icon: '🎨', title: 'Yaratıcılık', description: 'Özgün tasarımlar ve fikirlerle fark yaratıyoruz.' },
-        { icon: '💪', title: 'Profesyonellik', description: 'Her projede en yüksek kalite standartlarını sağlıyoruz.' },
-        { icon: '❤️', title: 'Tutku', description: 'İşimizi sevgiyle ve tutkuyla yapıyoruz.' }
-    ]
+    const { hero, story, whyUs, values, cta } = siteData.pages.about
 
     return (
         <div className="about-page">
@@ -65,14 +28,9 @@ function About() {
                 </div>
                 <div className="container">
                     <div className="about-hero-content">
-                        <span className="section-label reveal stagger-1">Hakkımızda</span>
-                        <h1 className="reveal stagger-2">
-                            Dijital Dünyada <span className="highlight">Güçlü</span> Bir Varlık
-                        </h1>
-                        <p className="reveal stagger-3">
-                            AkgulMedya olarak, markaların dijital dünyada başarılı olmaları için
-                            gereken tüm hizmetleri sunuyoruz.
-                        </p>
+                        <span className="section-label reveal stagger-1">{hero.label}</span>
+                        <h1 className="reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}></h1>
+                        <p className="reveal stagger-3">{hero.description}</p>
                     </div>
                 </div>
             </section>
@@ -85,37 +43,26 @@ function About() {
                 <div className="container">
                     <div className="story-grid">
                         <div className="story-content">
-                            <span className="section-label reveal stagger-1">Hikayemiz</span>
-                            <h2 className="reveal stagger-2">Dijital Yolculuğumuz</h2>
-                            <p className="reveal stagger-3">
-                                AkgulMedya, dijital pazarlama ve web tasarım alanında uzmanlaşmış
-                                bir ajans olarak yola çıktı. Amacımız, işletmelerin dijital
-                                dünyada güçlü bir varlık oluşturmasına yardımcı olmaktır.
-                            </p>
-                            <p className="reveal stagger-4">
-                                Uzman ekibimiz, yaratıcı tasarımlar, etkili pazarlama stratejileri
-                                ve modern teknolojiler kullanarak müşterilerimize en iyi
-                                sonuçları sunmak için çalışmaktadır.
-                            </p>
+                            <span className="section-label reveal stagger-1">{story.label}</span>
+                            <h2 className="reveal stagger-2">{story.title}</h2>
+                            {story.items.map((item, index) => (
+                                <p key={index} className={`reveal stagger-${index + 3}`}>
+                                    {item}
+                                </p>
+                            ))}
                             <div className="story-stats reveal stagger-5">
-                                <div className="story-stat">
-                                    <span className="stat-number">5+</span>
-                                    <span className="stat-text">Yıllık Deneyim</span>
-                                </div>
-                                <div className="story-stat">
-                                    <span className="stat-number">150+</span>
-                                    <span className="stat-text">Mutlu Müşteri</span>
-                                </div>
-                                <div className="story-stat">
-                                    <span className="stat-number">200+</span>
-                                    <span className="stat-text">Tamamlanan Proje</span>
-                                </div>
+                                {story.stats.map((stat, index) => (
+                                    <div key={index} className="story-stat">
+                                        <span className="stat-number">{stat.number}</span>
+                                        <span className="stat-text">{stat.text}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                         <div className="story-visual reveal stagger-3">
                             <div className="story-image-placeholder">
                                 <div className="placeholder-icon">🏢</div>
-                                <span>AkgulMedya</span>
+                                <span>{siteData.siteInfo.name}</span>
                             </div>
                         </div>
                     </div>
@@ -129,14 +76,12 @@ function About() {
             >
                 <div className="container">
                     <div className="section-header">
-                        <span className="section-label reveal stagger-1">Neden Biz?</span>
-                        <h2 className="reveal stagger-2">Neden AkgulMedya?</h2>
-                        <p className="reveal stagger-3">
-                            Bizi farklı kılan özelliklerimizi keşfedin
-                        </p>
+                        <span className="section-label reveal stagger-1">{whyUs.label}</span>
+                        <h2 className="reveal stagger-2">{whyUs.title}</h2>
+                        <p className="reveal stagger-3">{whyUs.description}</p>
                     </div>
                     <div className="why-us-grid">
-                        {whyUsItems.map((item, index) => (
+                        {whyUs.items.map((item, index) => (
                             <div
                                 key={index}
                                 className={`why-us-card reveal stagger-${(index % 3) + 1}`}
@@ -157,11 +102,11 @@ function About() {
             >
                 <div className="container">
                     <div className="section-header">
-                        <span className="section-label reveal stagger-1">Değerlerimiz</span>
-                        <h2 className="reveal stagger-2">Temel Değerlerimiz</h2>
+                        <span className="section-label reveal stagger-1">{values.label}</span>
+                        <h2 className="reveal stagger-2">{values.title}</h2>
                     </div>
                     <div className="values-grid">
-                        {values.map((value, index) => (
+                        {values.items.map((value, index) => (
                             <div
                                 key={index}
                                 className={`value-card reveal stagger-${index + 1}`}
@@ -179,10 +124,10 @@ function About() {
             <section className="about-cta-section">
                 <div className="container">
                     <div className="about-cta-content">
-                        <h2>Projeniz İçin Hazırız</h2>
-                        <p>Dijital dönüşüm yolculuğunuzda yanınızda olmak istiyoruz.</p>
+                        <h2>{cta.title}</h2>
+                        <p>{cta.description}</p>
                         <Link to="/iletisim" className="btn btn-primary">
-                            İletişime Geç
+                            {cta.button}
                             <span className="btn-arrow">→</span>
                         </Link>
                     </div>

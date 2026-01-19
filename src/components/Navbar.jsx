@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import siteData from '../data/siteData.json'
 
 function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false)
@@ -19,13 +20,7 @@ function Navbar() {
         setIsMenuOpen(false)
     }, [location])
 
-    const navLinks = [
-        { path: '/', label: 'Ana Sayfa' },
-        { path: '/hakkimizda', label: 'Hakkımızda' },
-        { path: '/hizmetlerimiz', label: 'Hizmetlerimiz' },
-        { path: '/isbirliklerimiz', label: 'İşbirliklerimiz' },
-        { path: '/iletisim', label: 'İletişim' }
-    ]
+    const navLinks = siteData.navigation
 
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>

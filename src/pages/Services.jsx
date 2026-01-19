@@ -1,54 +1,15 @@
 import { useInView } from '../hooks/useInView'
 import ServiceCard from '../components/ServiceCard'
 import { Link } from 'react-router-dom'
+import siteData from '../data/siteData.json'
 import './Services.css'
 
 function Services() {
     const [heroRef, heroVisible] = useInView({ threshold: 0.1 })
     const [servicesRef, servicesVisible] = useInView({ threshold: 0.1 })
 
-    const services = [
-        {
-            icon: '🌐',
-            title: 'Kurumsal Web Tasarım',
-            description: 'Modern, responsive ve kullanıcı dostu web siteleri tasarlıyoruz. SEO uyumlu altyapı ile arama motorlarında üst sıralara çıkmanızı sağlıyoruz.'
-        },
-        {
-            icon: '📈',
-            title: 'SEO & Dijital Pazarlama',
-            description: 'Arama motoru optimizasyonu, Google Ads ve dijital reklam kampanyaları ile markanızın görünürlüğünü artırıyoruz.'
-        },
-        {
-            icon: '📱',
-            title: 'Sosyal Medya Yönetimi',
-            description: 'Instagram, Facebook, Twitter ve LinkedIn hesaplarınızı profesyonel olarak yönetiyor, içerik üretiyoruz.'
-        },
-        {
-            icon: '🎬',
-            title: 'Prodüksiyon Hizmeti',
-            description: 'Profesyonel video çekimi, kurgu, animasyon ve fotoğraf hizmetleri ile markanızı görselleştiriyoruz.'
-        },
-        {
-            icon: '🛒',
-            title: 'E-Ticaret Çözümleri',
-            description: 'Online mağaza kurulumu, ödeme entegrasyonları ve e-ticaret yönetimi konularında destek veriyoruz.'
-        },
-        {
-            icon: '💼',
-            title: 'Marka Danışmanlığı',
-            description: 'Logo tasarımı, kurumsal kimlik ve marka stratejisi oluşturma konularında profesyonel danışmanlık sunuyoruz.'
-        },
-        {
-            icon: '✍️',
-            title: 'İçerik Üretimi',
-            description: 'Blog yazıları, sosyal medya içerikleri ve reklam metinleri ile markanızın sesini oluşturuyoruz.'
-        },
-        {
-            icon: '📊',
-            title: 'Analiz & Raporlama',
-            description: 'Detaylı performans analizleri ve raporlamalar ile stratejilerinizi veriye dayalı optimize ediyoruz.'
-        }
-    ]
+    const { hero, cta } = siteData.pages.services
+    const services = siteData.services
 
     return (
         <div className="services-page">
@@ -62,14 +23,9 @@ function Services() {
                 </div>
                 <div className="container">
                     <div className="services-hero-content">
-                        <span className="section-label reveal stagger-1">Hizmetlerimiz</span>
-                        <h1 className="reveal stagger-2">
-                            Dijital <span className="highlight">Çözümlerimiz</span>
-                        </h1>
-                        <p className="reveal stagger-3">
-                            İşletmenizin dijital dünyada başarılı olması için ihtiyacınız olan
-                            tüm hizmetleri sunuyoruz.
-                        </p>
+                        <span className="section-label reveal stagger-1">{hero.label}</span>
+                        <h1 className="reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}></h1>
+                        <p className="reveal stagger-3">{hero.description}</p>
                     </div>
                 </div>
             </section>
@@ -98,10 +54,10 @@ function Services() {
             <section className="services-cta-section">
                 <div className="container">
                     <div className="services-cta-content">
-                        <h2>Projeniz İçin Hazırız</h2>
-                        <p>Hangi hizmet size uygun olursa olsun, size özel çözümler sunmak için buradayız.</p>
+                        <h2>{cta.title}</h2>
+                        <p>{cta.description}</p>
                         <Link to="/iletisim" className="btn btn-primary">
-                            Hemen İletişime Geç
+                            {cta.button}
                             <span className="btn-arrow">→</span>
                         </Link>
                     </div>

@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { useInView } from '../hooks/useInView'
 import Marquee from '../components/Marquee'
 import ServiceCard from '../components/ServiceCard'
+import Icon from '../components/Icon'
+import siteData from '../data/siteData.json'
 import './Home.css'
 
 function Home() {
@@ -10,37 +12,8 @@ function Home() {
     const [servicesRef, servicesVisible] = useInView({ threshold: 0.1 })
     const [ctaRef, ctaVisible] = useInView({ threshold: 0.1 })
 
-    const marqueeItems = [
-        'Dijital Pazarlama',
-        'Sosyal Medya Yönetimi',
-        'Web Tasarım',
-        'Prodüksiyon',
-        'SEO Optimizasyonu',
-        'E-Ticaret Çözümleri'
-    ]
-
-    const services = [
-        {
-            icon: '🌐',
-            title: 'Kurumsal Web Tasarım',
-            description: 'Modern ve kullanıcı dostu web siteleri ile markanızı dijitalde öne çıkarıyoruz.'
-        },
-        {
-            icon: '📱',
-            title: 'Sosyal Medya Yönetimi',
-            description: 'Etkili sosyal medya stratejileri ile hedef kitlenize ulaşıyoruz.'
-        },
-        {
-            icon: '🎬',
-            title: 'Prodüksiyon Hizmeti',
-            description: 'Profesyonel video ve fotoğraf çekimleriyle markanızı görselleştiriyoruz.'
-        },
-        {
-            icon: '📈',
-            title: 'SEO & Dijital Pazarlama',
-            description: 'Arama motorlarında üst sıralara çıkmanızı sağlıyoruz.'
-        }
-    ]
+    const { hero, marquee, aboutPreview, servicesPreview, cta } = siteData.pages.home
+    const services = siteData.services.slice(0, 4) // Show first 4 services
 
     return (
         <div className="home-page">
@@ -55,21 +28,18 @@ function Home() {
                 </div>
                 <div className="container hero-content">
                     <div className="hero-text">
-                        <span className="hero-label reveal stagger-1">Dijital Ajans</span>
-                        <h1 className="hero-title reveal stagger-2">
-                            Markanızı <span className="highlight">Dijitalde</span> Zirveye Taşıyoruz
-                        </h1>
+                        <span className="hero-label reveal stagger-1">{hero.label}</span>
+                        <h1 className="hero-title reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}></h1>
                         <p className="hero-description reveal stagger-3">
-                            Yaratıcı çözümler ve stratejik yaklaşımlarla işletmenizi
-                            dijital dünyada bir adım öne çıkarıyoruz.
+                            {hero.description}
                         </p>
                         <div className="hero-buttons reveal stagger-4">
                             <Link to="/hizmetlerimiz" className="btn btn-primary">
-                                Hizmetlerimiz
+                                {hero.button1}
                                 <span className="btn-arrow">→</span>
                             </Link>
                             <Link to="/iletisim" className="btn btn-secondary">
-                                İletişime Geç
+                                {hero.button2}
                             </Link>
                         </div>
                     </div>
@@ -87,8 +57,8 @@ function Home() {
 
             {/* Marquee Section */}
             <section className="marquee-section">
-                <Marquee items={marqueeItems} speed={25} />
-                <Marquee items={marqueeItems} speed={30} reverse={true} />
+                <Marquee items={marquee} speed={25} />
+                <Marquee items={marquee} speed={30} reverse={true} />
             </section>
 
             {/* About Preview Section */}
@@ -99,45 +69,24 @@ function Home() {
                 <div className="container">
                     <div className="about-preview-grid">
                         <div className="about-preview-content">
-                            <span className="section-label reveal stagger-1">Hakkımızda</span>
-                            <h2 className="reveal stagger-2">
-                                Dijital Dönüşümünüzde Yanınızdayız
-                            </h2>
-                            <p className="reveal stagger-3">
-                                AkgulMedya olarak, markaların dijital dünyada güçlü bir
-                                varlık oluşturmasına yardımcı oluyoruz. Uzman ekibimiz
-                                ile yaratıcı ve stratejik çözümler sunuyoruz.
-                            </p>
-                            <div className="about-stats reveal stagger-4">
-                                <div className="stat-item">
-                                    <span className="stat-number">150+</span>
-                                    <span className="stat-label">Mutlu Müşteri</span>
-                                </div>
-                                <div className="stat-item">
-                                    <span className="stat-number">200+</span>
-                                    <span className="stat-label">Tamamlanan Proje</span>
-                                </div>
-                                <div className="stat-item">
-                                    <span className="stat-number">5+</span>
-                                    <span className="stat-label">Yıllık Deneyim</span>
-                                </div>
-                            </div>
-                            <Link to="/hakkimizda" className="btn btn-primary reveal stagger-5">
-                                Daha Fazla Bilgi
+                            <span className="section-label reveal stagger-1">{aboutPreview.label}</span>
+                            <h2 className="reveal stagger-2">{aboutPreview.title}</h2>
+                            <p className="reveal stagger-3">{aboutPreview.description}</p>
+                            <Link to="/hakkimizda" className="btn btn-primary reveal stagger-4">
+                                {aboutPreview.button}
                                 <span className="btn-arrow">→</span>
                             </Link>
                         </div>
                         <div className="about-preview-visual reveal stagger-3">
-                            <div className="visual-card">
-                                <div className="visual-icon">🚀</div>
-                                <h4>Hızlı & Etkili</h4>
-                                <p>Projelerinizi zamanında ve kaliteli teslim ediyoruz.</p>
-                            </div>
-                            <div className="visual-card">
-                                <div className="visual-icon">💡</div>
-                                <h4>Yaratıcı Çözümler</h4>
-                                <p>Özgün fikirlerle markanızı öne çıkarıyoruz.</p>
-                            </div>
+                            {aboutPreview.cards.map((card, index) => (
+                                <div key={index} className="visual-card">
+                                    <div className="visual-icon">
+                                        <Icon name={card.icon} size={28} strokeWidth={1.5} />
+                                    </div>
+                                    <h4>{card.title}</h4>
+                                    <p>{card.description}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -150,11 +99,9 @@ function Home() {
             >
                 <div className="container">
                     <div className="section-header">
-                        <span className="section-label reveal stagger-1">Hizmetlerimiz</span>
-                        <h2 className="reveal stagger-2">Neler Yapıyoruz?</h2>
-                        <p className="reveal stagger-3">
-                            Dijital dünyada başarıya ulaşmanız için ihtiyacınız olan tüm hizmetleri sunuyoruz.
-                        </p>
+                        <span className="section-label reveal stagger-1">{servicesPreview.label}</span>
+                        <h2 className="reveal stagger-2">{servicesPreview.title}</h2>
+                        <p className="reveal stagger-3">{servicesPreview.description}</p>
                     </div>
                     <div className="services-grid">
                         {services.map((service, index) => (
@@ -169,7 +116,7 @@ function Home() {
                     </div>
                     <div className="services-cta reveal stagger-5">
                         <Link to="/hizmetlerimiz" className="btn btn-secondary">
-                            Tüm Hizmetleri Gör
+                            {servicesPreview.button}
                             <span className="btn-arrow">→</span>
                         </Link>
                     </div>
@@ -183,12 +130,10 @@ function Home() {
             >
                 <div className="container">
                     <div className="cta-content">
-                        <h2 className="reveal stagger-1">Projenizi Hayata Geçirelim</h2>
-                        <p className="reveal stagger-2">
-                            Dijital dönüşüm yolculuğunuzda size rehberlik etmek için buradayız.
-                        </p>
+                        <h2 className="reveal stagger-1">{cta.title}</h2>
+                        <p className="reveal stagger-2">{cta.description}</p>
                         <Link to="/iletisim" className="btn btn-primary reveal stagger-3">
-                            Hemen İletişime Geç
+                            {cta.button}
                             <span className="btn-arrow">→</span>
                         </Link>
                     </div>
