@@ -442,6 +442,7 @@ p {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex: 0 0 auto;
 }
 
 .navbar-logo .logo-img {
@@ -464,7 +465,9 @@ p {
 .navbar-menu {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 40px;
+    flex: 1;
 }
 
 .navbar-link {
@@ -493,6 +496,23 @@ p {
 .navbar-link:hover,
 .navbar-link.active {
     color: var(--accent);
+}
+
+.navbar-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #FFFFFF;
+    transition: all var(--transition-fast);
+}
+
+.navbar-whatsapp:hover {
+    background: #128C7E;
+    transform: scale(1.1);
 }
 
 .mobile-menu-btn {

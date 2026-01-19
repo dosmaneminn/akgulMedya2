@@ -119,25 +119,25 @@
     "contact": {
         "address": {
             "title": "Adres",
-            "content": "İstanbul, Türkiye",
+            "content": "Muğla, Türkiye",
             "icon": "map-pin"
         },
         "email": {
             "title": "E-posta",
-            "content": "info@akgulmedya.com",
-            "link": "mailto:info@akgulmedya.com",
+            "content": "akgulmedya7@gmail.com",
+            "link": "mailto:akgulmedya7@gmail.com",
             "icon": "mail"
         },
         "phone": {
             "title": "Telefon",
-            "content": "+90 (555) 123 45 67",
-            "link": "tel:+905551234567",
+            "content": "+90 530 176 48 35",
+            "link": "tel:+905301764835",
             "icon": "phone"
         },
         "whatsapp": {
             "title": "WhatsApp",
-            "content": "+90 (555) 123 45 67",
-            "link": "https://wa.me/905551234567",
+            "content": "+90 530 176 48 35",
+            "link": "https://wa.me/905301764835",
             "icon": "whatsapp"
         },
         "hours": {
@@ -150,7 +150,7 @@
         {
             "name": "WhatsApp",
             "icon": "whatsapp",
-            "url": "https://wa.me/905551234567"
+            "url": "https://wa.me/905301764835"
         },
         {
             "name": "Instagram",

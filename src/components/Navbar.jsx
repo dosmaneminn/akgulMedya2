@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import siteData from '../data/siteData.json'
+import Icon from './Icon'
 
 function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false)
@@ -39,9 +40,15 @@ function Navbar() {
                             {link.label}
                         </Link>
                     ))}
-                    <Link to="/iletisim" className="btn btn-primary">
-                        İletişime Geç
-                    </Link>
+                    <a
+                        href="https://wa.me/905301764835"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="navbar-whatsapp"
+                        aria-label="WhatsApp"
+                    >
+                        <Icon name="whatsapp" size={28} />
+                    </a>
                 </div>
 
                 <button
@@ -59,3 +66,4 @@ function Navbar() {
 }
 
 export default Navbar
+

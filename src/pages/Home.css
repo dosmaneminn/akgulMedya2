@@ -53,7 +53,8 @@
 }
 
 .btn-light:hover {
-    background: rgba(255, 255, 255, 0.95);
+    background: #FFFFFF;
+    color: #43A047;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -65,25 +66,10 @@
 }
 
 .btn-light-outline:hover {
-    background: #FFFFFF;
-    color: #43A047 !important;
-    transform: translateY(-2px);
-}
-
-.btn-light:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: translateY(-2px);
-}
-
-.btn-light-outline {
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    color: var(--text-light);
-}
-
-.btn-light-outline:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--text-light);
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF;
+    transform: translateY(-2px);
 }
 
 .hero-scroll-light {
