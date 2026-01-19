@@ -1,5 +1,6 @@
+import { useEffect } from 'react'
 import { useInView } from '../hooks/useInView'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import siteData from '../data/siteData.json'
 import WaveBackground from '../components/WaveBackground'
 import './Partnerships.css'
@@ -7,8 +8,21 @@ import './Partnerships.css'
 function Partnerships() {
     const [heroRef, heroVisible] = useInView({ threshold: 0.1 })
     const [partnersRef, partnersVisible] = useInView({ threshold: 0.1 })
+    const location = useLocation()
 
     const { hero, partners, cta } = siteData.pages.partnerships
+
+    // Scroll to hash anchor on page load
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.querySelector(location.hash)
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }, 100)
+            }
+        }
+    }, [location.hash])
 
     return (
         <div className="partnerships-page">
@@ -29,6 +43,7 @@ function Partnerships() {
 
             {/* Partners Grid Section */}
             <section
+                id="markalar"
                 ref={partnersRef}
                 className={`partners-section section ${partnersVisible ? 'visible' : ''}`}
             >

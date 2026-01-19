@@ -24,47 +24,65 @@ function Navbar() {
     const navLinks = siteData.navigation
 
     return (
-        <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-            <div className="container">
-                <Link to="/" className="navbar-logo">
-                    <img src="/images/logo.png" alt="AkgulMedya" className="logo-img" />
-                </Link>
-
-                <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.path}
-                            to={link.path}
-                            className={`navbar-link ${location.pathname === link.path ? 'active' : ''}`}
-                        >
-                            {link.label}
-                        </Link>
-                    ))}
+        <>
+            {/* Top Bar with Contact Info */}
+            <div className={`navbar-topbar ${isScrolled ? 'hidden' : ''}`}>
+                <div className="container topbar-content">
+                    <a href="mailto:akgulmedya7@gmail.com" className="topbar-item">
+                        <Icon name="mail" size={14} />
+                        <span>akgulmedya7@gmail.com</span>
+                    </a>
+                    <a href="tel:+905301764835" className="topbar-item">
+                        <Icon name="phone" size={14} />
+                        <span>+90 530 176 48 35</span>
+                    </a>
                 </div>
-
-                <a
-                    href="https://wa.me/905301764835"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="navbar-whatsapp"
-                    aria-label="WhatsApp"
-                >
-                    <Icon name="whatsapp" size={28} />
-                </a>
-
-                <button
-                    className="mobile-menu-btn"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    aria-label="Menu"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </div>
-        </nav>
+
+            {/* Main Navbar */}
+            <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+                <div className="container">
+                    <Link to="/" className="navbar-logo">
+                        <img src="/images/logo.png" alt="AkgulMedya" className="logo-img" />
+                    </Link>
+
+                    <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.path}
+                                to={link.path}
+                                className={`navbar-link ${location.pathname === link.path ? 'active' : ''}`}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </div>
+
+                    <a
+                        href="https://wa.me/905301764835"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="navbar-whatsapp"
+                        aria-label="WhatsApp"
+                    >
+                        <Icon name="whatsapp" size={28} />
+                    </a>
+
+                    <button
+                        className="mobile-menu-btn"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label="Menu"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </>
     )
 }
 
 export default Navbar
+
 

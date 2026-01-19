@@ -5,12 +5,12 @@
         "description": "Markanızı dijital dünyada zirveye taşıyoruz."
     },
     "colors": {
-        "primary": "#21A81D",
-        "primaryDark": "#006B25",
-        "primaryLight": "#4BC740",
-        "primaryLighter": "#E9F5F4",
-        "accent": "#006722",
-        "accentDark": "#00381E",
+        "primary": "#006C4E",
+        "primaryDark": "#00533C",
+        "primaryLight": "#008C65",
+        "primaryLighter": "#E9F3F5",
+        "accent": "#006C4E",
+        "accentDark": "#003123",
         "bgLight": "#F5FAF7",
         "bgWhite": "#FFFFFF",
         "bgDark": "#1A2E25",
@@ -34,7 +34,7 @@
             "label": "Hizmetlerimiz"
         },
         {
-            "path": "/isbirliklerimiz",
+            "path": "/isbirliklerimiz#markalar",
             "label": "İşbirliklerimiz"
         },
         {
@@ -45,13 +45,13 @@
     "services": [
         {
             "id": "qr-menu",
-            "icon": "qr-code",
+            "icon": "qrCode",
             "title": "QR Menü",
             "description": "Restoranlar ve kafeler için modern, interaktif QR menü çözümleri sunuyoruz."
         },
         {
             "id": "drone",
-            "icon": "drone",
+            "icon": "plane",
             "title": "Drone Çekimi",
             "description": "Profesyonel drone ile havadan çekim hizmetleri, etkileyici görüntüler."
         },
@@ -69,7 +69,7 @@
         },
         {
             "id": "n8n-automation",
-            "icon": "workflow",
+            "icon": "robot",
             "title": "N8N Otomasyonları",
             "description": "İş süreçlerinizi otomatikleştiren n8n workflow çözümleri."
         },
@@ -81,19 +81,19 @@
         },
         {
             "id": "social-media",
-            "icon": "share",
+            "icon": "hashtag",
             "title": "Sosyal Medya Yönetimi",
             "description": "Sosyal medya hesaplarınızı profesyonel olarak yönetiyoruz."
         },
         {
             "id": "meta-ads",
-            "icon": "megaphone",
+            "icon": "bullhorn",
             "title": "Meta Reklamları",
             "description": "Facebook ve Instagram reklam kampanyaları ile hedef kitlenize ulaşın."
         },
         {
             "id": "seo",
-            "icon": "search",
+            "icon": "chartLine",
             "title": "SEO",
             "description": "Arama motoru optimizasyonu ile organik trafiğinizi artırıyoruz."
         },
@@ -105,13 +105,13 @@
         },
         {
             "id": "logo-design",
-            "icon": "pen-tool",
+            "icon": "palette",
             "title": "Logo Tasarımı",
             "description": "Markanızı yansıtan özgün ve profesyonel logo tasarımları."
         },
         {
             "id": "brand-management",
-            "icon": "briefcase",
+            "icon": "crown",
             "title": "Marka Yönetimi",
             "description": "Marka stratejisi, konumlandırma ve kurumsal kimlik yönetimi."
         }

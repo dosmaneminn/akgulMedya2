@@ -1,20 +1,48 @@
 import * as LucideIcons from 'lucide-react'
+import {
+    FaQrcode,
+    FaPlane,
+    FaGlobe,
+    FaVideo,
+    FaRobot,
+    FaCamera,
+    FaHashtag,
+    FaBullhorn,
+    FaChartLine,
+    FaStar,
+    FaPalette,
+    FaCrown
+} from 'react-icons/fa'
 
-// Map string icon names to Lucide components
+// Map string icon names to components
 const iconMap = {
-    // Services
-    'qr-code': LucideIcons.QrCode,
-    'drone': LucideIcons.Plane,
-    'globe': LucideIcons.Globe,
-    'video': LucideIcons.Video,
-    'workflow': LucideIcons.Workflow,
-    'camera': LucideIcons.Camera,
-    'share': LucideIcons.Share2,
-    'megaphone': LucideIcons.Megaphone,
-    'search': LucideIcons.Search,
-    'star': LucideIcons.Star,
-    'pen-tool': LucideIcons.PenTool,
-    'briefcase': LucideIcons.Briefcase,
+    // Services - FontAwesome Updates
+    'qrCode': FaQrcode,
+    'plane': FaPlane,
+    'globe': FaGlobe,
+    'video': FaVideo,
+    'robot': FaRobot,
+    'camera': FaCamera,
+    'hashtag': FaHashtag,
+    'bullhorn': FaBullhorn,
+    'chartLine': FaChartLine,
+    'star': FaStar,
+    'palette': FaPalette,
+    'crown': FaCrown,
+
+    // Old mappings for backward compatibility or if used elsewhere
+    'qr-code': FaQrcode,
+    'drone': FaPlane,
+    'web-design': FaGlobe,
+    'production': FaVideo,
+    'n8n-automation': FaRobot,
+    'photo-video': FaCamera,
+    'social-media': FaHashtag,
+    'meta-ads': FaBullhorn,
+    'seo': FaChartLine,
+    'google-reviews': FaStar,
+    'logo-design': FaPalette,
+    'brand-management': FaCrown,
 
     // Contact
     'map-pin': LucideIcons.MapPin,
@@ -38,7 +66,6 @@ const iconMap = {
     'users': LucideIcons.Users,
     'shield': LucideIcons.Shield,
     'sparkles': LucideIcons.Sparkles,
-    'palette': LucideIcons.Palette,
     'award': LucideIcons.Award,
     'heart': LucideIcons.Heart,
 
