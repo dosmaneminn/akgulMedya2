@@ -661,6 +661,31 @@ p {
 }
 
 @media (max-width: 768px) {
+
+    /* Hide topbar on mobile */
+    .navbar-topbar {
+        display: none;
+    }
+
+    /* Fix navbar to start at top on mobile */
+    .navbar {
+        top: 0;
+        padding: 12px 0;
+    }
+
+    .navbar.scrolled {
+        padding: 10px 0;
+    }
+
+    .navbar-logo .logo-img {
+        height: 50px;
+    }
+
+    .navbar.scrolled .navbar-logo .logo-img {
+        height: 45px;
+    }
+
+    /* Improved mobile menu overlay */
     .navbar-menu {
         position: fixed;
         top: 0;
@@ -670,17 +695,42 @@ p {
         background: var(--bg-white);
         flex-direction: column;
         justify-content: center;
+        gap: 24px;
         transition: right var(--transition-medium);
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 999;
     }
 
     .navbar-menu.active {
         right: 0;
     }
 
+    .navbar-link {
+        font-size: 1.25rem;
+        padding: 12px 24px;
+    }
+
+    /* Hamburger menu button */
     .mobile-menu-btn {
         display: flex;
         z-index: 1001;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu-btn span {
+        width: 24px;
+        height: 2px;
+        background: var(--text-dark);
+        transition: all var(--transition-fast);
+    }
+
+    /* WhatsApp button sizing for mobile */
+    .navbar-whatsapp {
+        width: 40px;
+        height: 40px;
     }
 
     .footer-content {
@@ -702,18 +752,72 @@ p {
 @media (max-width: 480px) {
     :root {
         --section-padding: 60px 0;
+        --container-padding: 0 16px;
     }
 
     h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
         font-size: 1.75rem;
     }
 
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
     .btn {
-        padding: 14px 28px;
-        font-size: 0.9rem;
+        padding: 12px 24px;
+        font-size: 0.875rem;
+        width: 100%;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-label {
+        padding: 6px 16px;
+        font-size: 0.75rem;
+    }
+
+    .card {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    /* Navbar adjustments for small screens */
+    .navbar-logo .logo-img {
+        height: 40px;
+    }
+
+    .navbar.scrolled .navbar-logo .logo-img {
+        height: 36px;
+    }
+
+    .navbar-link {
+        font-size: 1.1rem;
+    }
+}
+
+/* Body scroll lock when mobile menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }

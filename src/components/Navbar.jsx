@@ -17,9 +17,20 @@ function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
+    // Close menu on location change
     useEffect(() => {
         setIsMenuOpen(false)
     }, [location])
+
+    // Body scroll lock when menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.classList.add('menu-open')
+        } else {
+            document.body.classList.remove('menu-open')
+        }
+        return () => document.body.classList.remove('menu-open')
+    }, [isMenuOpen])
 
     const navLinks = siteData.navigation
 

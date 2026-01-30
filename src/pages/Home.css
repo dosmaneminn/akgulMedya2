@@ -461,11 +461,29 @@
 @media (max-width: 768px) {
     .hero-section {
         min-height: auto;
-        padding: 120px 0 80px;
+        padding: 100px 0 60px;
     }
 
     .hero-scroll-indicator {
         display: none;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 24px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
     }
 
     .about-stats {
@@ -475,5 +493,55 @@
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 80px 0 40px;
+    }
+
+    .hero-label {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+        margin-bottom: 16px;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+        margin-bottom: 16px;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .visual-card {
+        padding: 20px;
+    }
+
+    .visual-icon {
+        font-size: 2rem;
+    }
+
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
     }
 }
