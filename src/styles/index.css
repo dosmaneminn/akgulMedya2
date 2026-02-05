@@ -494,16 +494,16 @@ p {
 
 /* ===== NAVBAR TOPBAR ===== */
 .navbar-topbar {
-    background: var(--bg-darker);
-    padding: 8px 0;
+    background: var(--bg-dark);
+    padding: 10px 0;
     transition: all var(--transition-medium);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1001;
-    height: 36px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    height: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar-topbar.hidden {
@@ -519,9 +519,9 @@ p {
 .topbar-item {
     display: flex;
     align-items: center;
-    gap: 6px;
-    color: var(--text-muted);
-    font-size: 0.8rem;
+    gap: 8px;
+    color: #FFFFFF;
+    font-size: 0.9rem;
     transition: color var(--transition-fast);
 }
 
@@ -530,13 +530,13 @@ p {
 }
 
 .topbar-item svg {
-    color: var(--emerald-400);
+    color: var(--emerald-300);
 }
 
 /* ===== NAVBAR STYLES - WHITE CLEAN ===== */
 .navbar {
     position: fixed;
-    top: 36px;
+    top: 40px;
     left: 0;
     right: 0;
     width: 100%;
