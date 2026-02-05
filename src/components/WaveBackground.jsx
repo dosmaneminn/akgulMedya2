@@ -8,11 +8,11 @@ function WaveBackground() {
     const time = useRef(0)
 
     const colors = [
-        '#74C293', // Base Requested Color
-        '#95D1AD', // Lighter
-        '#56AB76', // Darker
-        '#B4DFC5', // Very Light
-        '#3B8C5B', // Very Dark
+        '#22C55E', // Modern Green Primary
+        '#4ADE80', // Lighter Green
+        '#16A34A', // Darker Green
+        '#86EFAC', // Very Light
+        '#15803D', // Very Dark
     ]
 
     const handleMouseMove = useCallback((e) => {

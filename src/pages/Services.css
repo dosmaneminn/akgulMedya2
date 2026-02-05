@@ -53,7 +53,7 @@
 
 /* Services Grid Section */
 .services-grid-section {
-    background: #F5F7FA;
+    background: var(--bg-light);
 }
 
 .services-page .services-grid {
@@ -64,7 +64,7 @@
 
 /* Services CTA Section */
 .services-cta-section {
-    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--accent-dark) 100%);
+    background: linear-gradient(135deg, var(--green-500) 0%, var(--green-600) 100%);
     padding: 80px 0;
     text-align: center;
 }

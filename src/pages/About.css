@@ -25,7 +25,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, var(--bg-light) 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, #FFFFFF 0%, #F0FDF4 100%);
 }
 
 .about-hero-shapes .shape {
@@ -86,7 +86,7 @@
 
 /* Story Section */
 .story-section {
-    background: var(--bg-white);
+    background: #FFFFFF;
 }
 
 .story-grid {
@@ -98,11 +98,13 @@
 
 .story-content h2 {
     margin-bottom: 24px;
+    color: var(--text-dark);
 }
 
 .story-content p {
     margin-bottom: 20px;
     line-height: 1.8;
+    color: var(--text-medium);
 }
 
 .story-stats {
@@ -162,7 +164,7 @@
 
 /* Why Us Section */
 .why-us-section {
-    background: var(--bg-light);
+    background: #F8FAF9;
 }
 
 .why-us-grid {
@@ -172,12 +174,13 @@
 }
 
 .why-us-card {
-    background: var(--bg-white);
+    background: #FFFFFF;
     padding: 40px 30px;
     border-radius: 20px;
     text-align: center;
     transition: all var(--transition-medium);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .why-us-card:hover {
@@ -188,6 +191,7 @@
 .why-us-icon {
     font-size: 3rem;
     margin-bottom: 20px;
+    color: #22C55E;
 }
 
 .why-us-card h4 {
@@ -203,7 +207,7 @@
 
 /* Values Section */
 .values-section {
-    background: var(--bg-white);
+    background: #FFFFFF;
 }
 
 .values-grid {
@@ -215,9 +219,10 @@
 .value-card {
     text-align: center;
     padding: 40px 24px;
-    background: linear-gradient(135deg, var(--bg-light) 0%, var(--primary-lighter) 100%);
+    background: #F8FAF9;
     border-radius: 20px;
     transition: all var(--transition-medium);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .value-card:hover {
@@ -228,6 +233,7 @@
 .value-icon {
     font-size: 2.5rem;
     margin-bottom: 16px;
+    color: var(--primary);
 }
 
 .value-card h4 {

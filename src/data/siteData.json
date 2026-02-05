@@ -5,20 +5,20 @@
         "description": "Markanızı dijital dünyada zirveye taşıyoruz."
     },
     "colors": {
-        "primary": "#006C4E",
-        "primaryDark": "#00533C",
-        "primaryLight": "#008C65",
-        "primaryLighter": "#E9F3F5",
-        "accent": "#006C4E",
-        "accentDark": "#003123",
-        "bgLight": "#F5FAF7",
+        "primary": "#22C55E",
+        "primaryDark": "#16A34A",
+        "primaryLight": "#4ADE80",
+        "primaryLighter": "#DCFCE7",
+        "accent": "#2DD4BF",
+        "accentDark": "#0D9488",
+        "bgLight": "#F0FDF4",
         "bgWhite": "#FFFFFF",
-        "bgDark": "#1A2E25",
-        "bgDarker": "#0F1D17",
-        "textDark": "#1A2E25",
-        "textMedium": "#4A5D55",
-        "textLight": "#FFFFFF",
-        "textMuted": "#8A9A92"
+        "bgDark": "#0A1410",
+        "bgDarker": "#050A08",
+        "textDark": "#0A1410",
+        "textMedium": "#6B7280",
+        "textLight": "#F9FAFB",
+        "textMuted": "#9CA3AF"
     },
     "navigation": [
         {
@@ -155,22 +155,7 @@
         {
             "name": "Instagram",
             "icon": "instagram",
-            "url": "#"
-        },
-        {
-            "name": "Facebook",
-            "icon": "facebook",
-            "url": "#"
-        },
-        {
-            "name": "Twitter",
-            "icon": "twitter",
-            "url": "#"
-        },
-        {
-            "name": "LinkedIn",
-            "icon": "linkedin",
-            "url": "#"
+            "url": "https://www.instagram.com/whiterosedijital/"
         }
     ],
     "pages": {

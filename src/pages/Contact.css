@@ -251,12 +251,14 @@
     justify-content: center;
     font-size: 1.5rem;
     transition: all var(--transition-medium);
+    color: #22C55E;
 }
 
 .social-icon:hover {
-    background: var(--accent);
+    background: var(--primary);
+    color: #FFFFFF;
     transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
 }
 
 /* Reveal Animations */
