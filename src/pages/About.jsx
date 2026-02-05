@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import siteData from '../data/siteData.json'
 import WaveBackground from '../components/WaveBackground'
 import Icon from '../components/Icon'
+import HighlightText from '../components/HighlightText'
 import './About.css'
 
 function About() {
@@ -24,7 +25,7 @@ function About() {
                 <div className="container">
                     <div className="about-hero-content">
                         <span className="section-label hero-label-light reveal stagger-1">{hero.label}</span>
-                        <h1 className="hero-title-light reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}></h1>
+                        <h1 className="hero-title-light reveal stagger-2"><HighlightText text={hero.title} /></h1>
                         <p className="hero-description-light reveal stagger-3">{hero.description}</p>
                     </div>
                 </div>

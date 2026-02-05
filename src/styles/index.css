@@ -1,14 +1,14 @@
-/* ===== CSS VARIABLES - MODERN GREEN PALETTE ===== */
+/* ===== CSS VARIABLES - EMERALD PALETTE ===== */
 :root {
-    /* Modern Green Palette - Sage/Mint Tones */
-    --green-50: #F0FDF4;
-    --green-100: #DCFCE7;
-    --green-200: #BBF7D0;
-    --green-300: #86EFAC;
-    --green-400: #4ADE80;
-    --green-500: #22C55E;
-    --green-600: #16A34A;
-    --green-700: #15803D;
+    /* Emerald Palette - Centered around Emerald 400 (#34D399) */
+    --emerald-50: #ECFDF5;
+    --emerald-100: #D1FAE5;
+    --emerald-200: #A7F3D0;
+    --emerald-300: #6EE7B7;
+    --emerald-400: #34D399;
+    --emerald-500: #10B981;
+    --emerald-600: #059669;
+    --emerald-700: #047857;
 
     /* Teal Accent for Depth */
     --teal-300: #5EEAD4;
@@ -16,35 +16,36 @@
     --teal-500: #14B8A6;
     --teal-600: #0D9488;
 
-    /* Primary = Modern Green */
-    --primary: var(--green-500);
-    --primary-dark: var(--green-600);
-    --primary-light: var(--green-300);
-    --primary-lighter: var(--green-100);
-    --accent: var(--teal-400);
-    --accent-dark: var(--teal-600);
+    /* Primary = Emerald 400 */
+    --primary: var(--emerald-400);
+    --primary-dark: var(--emerald-500);
+    --primary-light: var(--emerald-300);
+    --primary-lighter: var(--emerald-100);
+    --accent: var(--emerald-400);
+    --accent-dark: var(--emerald-600);
 
-    /* Rich Light Backgrounds */
-    --bg-dark: #FFFFFF;
-    --bg-darker: #F8FAF9;
+    /* Backgrounds */
+    --bg-dark: #0A1410;
+    --bg-darker: #050A08;
     --bg-card: #FFFFFF;
-    --bg-elevated: #F0FDF4;
+    --bg-elevated: #ECFDF5;
     --bg-light: #F8FAF9;
     --bg-white: #FFFFFF;
+    --bg-body: #FFFFFF;
 
-    /* Text Colors for Light Theme */
+    /* Text Colors */
     --text-dark: #1A2E25;
-    --text-light: #1A2E25;
+    --text-light: #F9FAFB;
     --text-muted: #6B7280;
     --text-medium: #4A5D55;
 
-    /* Dramatic Shadows with Green Glow */
-    --shadow-sm: 0 2px 8px rgba(34, 197, 94, 0.08);
-    --shadow-md: 0 8px 32px rgba(34, 197, 94, 0.12);
-    --shadow-lg: 0 24px 64px rgba(34, 197, 94, 0.16);
-    --shadow-xl: 0 32px 80px rgba(34, 197, 94, 0.2);
-    --shadow-glow: 0 0 80px rgba(34, 197, 94, 0.35);
-    --shadow-glow-sm: 0 0 40px rgba(34, 197, 94, 0.2);
+    /* Dramatic Shadows with Emerald Glow */
+    --shadow-sm: 0 2px 8px rgba(52, 211, 153, 0.08);
+    --shadow-md: 0 8px 32px rgba(52, 211, 153, 0.12);
+    --shadow-lg: 0 24px 64px rgba(52, 211, 153, 0.16);
+    --shadow-xl: 0 32px 80px rgba(52, 211, 153, 0.2);
+    --shadow-glow: 0 0 80px rgba(52, 211, 153, 0.35);
+    --shadow-glow-sm: 0 0 40px rgba(52, 211, 153, 0.2);
     --shadow-teal: 0 0 60px rgba(45, 212, 191, 0.25);
 
     /* Smooth Transitions */
@@ -69,12 +70,12 @@
     --radius-xl: 40px;
     --radius-full: 9999px;
 
-    /* Gradient Mesh - Modern Green */
-    --gradient-primary: linear-gradient(135deg, var(--green-500) 0%, var(--green-600) 100%);
-    --gradient-accent: linear-gradient(135deg, var(--teal-400) 0%, var(--green-500) 100%);
-    --gradient-mesh: radial-gradient(at 40% 20%, rgba(34, 197, 94, 0.25) 0px, transparent 50%),
-        radial-gradient(at 80% 0%, rgba(45, 212, 191, 0.15) 0px, transparent 50%),
-        radial-gradient(at 0% 50%, rgba(34, 197, 94, 0.15) 0px, transparent 50%);
+    /* Gradient Mesh - Emerald */
+    --gradient-primary: linear-gradient(135deg, var(--emerald-400) 0%, var(--emerald-500) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--emerald-300) 0%, var(--emerald-500) 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, rgba(52, 211, 153, 0.25) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, rgba(110, 231, 183, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, rgba(52, 211, 153, 0.15) 0px, transparent 50%);
 
     /* Noise texture */
     --noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -97,8 +98,8 @@ body {
     font-family: var(--font-body);
     font-size: 17px;
     line-height: 1.7;
-    color: var(--text-light);
-    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    background-color: var(--bg-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -152,7 +153,7 @@ h6 {
     font-family: var(--font-display);
     font-weight: 600;
     line-height: 1.1;
-    color: var(--text-light);
+    color: var(--text-dark);
     letter-spacing: -0.02em;
 }
 
@@ -223,19 +224,19 @@ p {
 .btn-primary {
     background: var(--gradient-primary);
     color: var(--text-light);
-    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4), var(--shadow-glow-sm);
+    box-shadow: 0 4px 20px rgba(52, 211, 153, 0.4), var(--shadow-glow-sm);
     border: none;
 }
 
 .btn-primary:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 8px 40px rgba(34, 197, 94, 0.5), var(--shadow-glow);
+    box-shadow: 0 8px 40px rgba(52, 211, 153, 0.5), var(--shadow-glow);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--teal-400);
-    border: 2px solid var(--green-500);
+    color: var(--emerald-400);
+    border: 2px solid var(--emerald-400);
 }
 
 .btn-secondary:hover {
@@ -251,10 +252,17 @@ p {
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity var(--transition-slow), transform var(--transition-slow);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Parent-based reveal trigger (IntersectionObserver on section) */
+.visible .reveal {
     opacity: 1;
     transform: translateY(0);
 }
@@ -436,8 +444,8 @@ p {
     align-items: center;
     gap: 8px;
     padding: 10px 24px;
-    background: rgba(34, 197, 94, 0.1);
-    color: #16A34A;
+    background: rgba(52, 211, 153, 0.1);
+    color: #059669;
     font-family: var(--font-display);
     font-size: 0.8rem;
     font-weight: 600;
@@ -445,7 +453,7 @@ p {
     margin-bottom: 20px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    border: 1px solid rgba(34, 197, 94, 0.3);
+    border: 1px solid rgba(52, 211, 153, 0.3);
     backdrop-filter: blur(10px);
 }
 
@@ -477,7 +485,7 @@ p {
 .card:hover {
     transform: translateY(-12px);
     box-shadow: var(--shadow-lg), var(--shadow-glow-sm);
-    border-color: rgba(34, 197, 94, 0.2);
+    border-color: rgba(52, 211, 153, 0.2);
 }
 
 .card:hover::before {
@@ -518,11 +526,11 @@ p {
 }
 
 .topbar-item:hover {
-    color: var(--teal-400);
+    color: var(--emerald-400);
 }
 
 .topbar-item svg {
-    color: var(--green-500);
+    color: var(--emerald-400);
 }
 
 /* ===== NAVBAR STYLES - WHITE CLEAN ===== */
@@ -538,7 +546,7 @@ p {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(34, 197, 94, 0.15);
+    border-bottom: 1px solid rgba(52, 211, 153, 0.15);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -546,7 +554,7 @@ p {
     padding: 12px 0;
     top: 0;
     background: rgba(255, 255, 255, 0.98);
-    border-bottom: 1px solid rgba(34, 197, 94, 0.2);
+    border-bottom: 1px solid rgba(52, 211, 153, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -651,93 +659,7 @@ p {
     transition: all var(--transition-fast);
 }
 
-/* ===== FOOTER STYLES ===== */
-.footer {
-    background: var(--bg-dark);
-    color: var(--text-light);
-    padding: 80px 0 30px;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 60px;
-    margin-bottom: 60px;
-}
-
-.footer-brand p {
-    color: var(--text-muted);
-    margin-top: 16px;
-    max-width: 300px;
-}
-
-.footer-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 24px;
-    color: var(--text-light);
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.footer-links a {
-    color: var(--text-muted);
-    transition: color var(--transition-fast);
-}
-
-.footer-links a:hover {
-    color: var(--primary);
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-bottom p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-}
-
-.footer-social {
-    display: flex;
-    gap: 16px;
-}
-
-.footer-social a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-light);
-    transition: all var(--transition-fast);
-}
-
-.footer-social a:hover {
-    background: var(--primary);
-    color: #FFFFFF;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
-}
-
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-}
-
 @media (max-width: 768px) {
 
     /* Hide topbar on mobile */

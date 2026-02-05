@@ -73,33 +73,7 @@ const iconMap = {
     'circle': LucideIcons.Circle
 }
 
-// Custom WhatsApp Icon Component
-const WhatsAppIcon = ({ size, className, strokeWidth }) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={strokeWidth}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-    >
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .57 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.03 12.03 0 0 0 2.81.57A2 2 0 0 1 22 16.92z" />
-        <path d="M17.5 12a5.5 5.5 0 1 0-3.9 9.4 5.5 5.5 0 0 0 3.9-9.4z" opacity="0.1" />
-        {/* Using a simpler phone-like representation but replacing with actual WhatsApp-like distinct shape if needed. 
-            User asked for "real whatsapp icon". The MessageCircle from Lucide is close but generic.
-            Let's use a path that mimics the official logo shape more closely if simple phone isn't enough.
-            Actually, let's use a proper SVG path for WhatsApp brand icon.
-        */}
-        <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
-        <path d="M9 10a0.5 .5 0 0 0 1 0V9a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" stroke="none" />
-    </svg>
-)
-
-// Better WhatsApp SVG path
+// WhatsApp Brand SVG Icon
 const BrandWhatsApp = ({ size, className }) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"

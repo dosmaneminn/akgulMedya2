@@ -191,7 +191,7 @@
 .why-us-icon {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #22C55E;
+    color: #34D399;
 }
 
 .why-us-card h4 {
@@ -262,25 +262,6 @@
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.1rem;
     margin-bottom: 32px;
-}
-
-/* Reveal Animations */
-.about-hero .reveal,
-.story-section .reveal,
-.why-us-section .reveal,
-.values-section .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.about-hero.visible .reveal,
-.story-section.visible .reveal,
-.why-us-section.visible .reveal,
-.values-section.visible .reveal {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* ===== RESPONSIVE ===== */

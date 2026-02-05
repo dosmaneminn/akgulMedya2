@@ -4,6 +4,7 @@ import Marquee from '../components/Marquee'
 import ServiceCard from '../components/ServiceCard'
 import Icon from '../components/Icon'
 import WaveBackground from '../components/WaveBackground'
+import HighlightText from '../components/HighlightText'
 import siteData from '../data/siteData.json'
 import './Home.css'
 
@@ -27,7 +28,7 @@ function Home() {
                 <div className="container hero-content">
                     <div className="hero-text">
                         <span className="hero-label hero-label-light reveal stagger-1">{hero.label}</span>
-                        <h1 className="hero-title hero-title-light reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}></h1>
+                        <h1 className="hero-title hero-title-light reveal stagger-2"><HighlightText text={hero.title} /></h1>
                         <p className="hero-description hero-description-light reveal stagger-3">
                             {hero.description}
                         </p>

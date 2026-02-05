@@ -5,20 +5,20 @@
         "description": "Markanızı dijital dünyada zirveye taşıyoruz."
     },
     "colors": {
-        "primary": "#22C55E",
-        "primaryDark": "#16A34A",
-        "primaryLight": "#4ADE80",
-        "primaryLighter": "#DCFCE7",
-        "accent": "#2DD4BF",
-        "accentDark": "#0D9488",
-        "bgLight": "#F0FDF4",
+        "primary": "#34D399",
+        "primaryDark": "#10B981",
+        "primaryLight": "#6EE7B7",
+        "primaryLighter": "#D1FAE5",
+        "accent": "#34D399",
+        "accentDark": "#059669",
+        "bgLight": "#F8FAF9",
         "bgWhite": "#FFFFFF",
         "bgDark": "#0A1410",
         "bgDarker": "#050A08",
-        "textDark": "#0A1410",
-        "textMedium": "#6B7280",
+        "textDark": "#1A2E25",
+        "textMedium": "#4A5D55",
         "textLight": "#F9FAFB",
-        "textMuted": "#9CA3AF"
+        "textMuted": "#6B7280"
     },
     "navigation": [
         {
@@ -162,7 +162,7 @@
         "home": {
             "hero": {
                 "label": "Dijital Ajans",
-                "title": "Markanızı <span class=\"highlight\">Dijitalde</span> Zirveye Taşıyoruz",
+                "title": "Markanızı [Dijitalde] Zirveye Taşıyoruz",
                 "description": "Yaratıcı çözümler ve stratejik yaklaşımlarla işletmenizi dijital dünyada bir adım öne çıkarıyoruz.",
                 "button1": "Hizmetlerimiz",
                 "button2": "İletişime Geç"
@@ -208,7 +208,7 @@
         "about": {
             "hero": {
                 "label": "Hakkımızda",
-                "title": "Dijital Dünyada <span class=\"highlight\">Güçlü</span> Bir Varlık",
+                "title": "Dijital Dünyada [Güçlü] Bir Varlık",
                 "description": "AkgulMedya olarak, markaların dijital dünyada başarılı olmaları için gereken tüm hizmetleri sunuyoruz."
             },
             "story": {
@@ -292,7 +292,7 @@
         "services": {
             "hero": {
                 "label": "Hizmetlerimiz",
-                "title": "Dijital <span class=\"highlight\">Çözümlerimiz</span>",
+                "title": "Dijital [Çözümlerimiz]",
                 "description": "İşletmenizin dijital dünyada başarılı olması için ihtiyacınız olan tüm hizmetleri sunuyoruz."
             },
             "cta": {
@@ -304,7 +304,7 @@
         "partnerships": {
             "hero": {
                 "label": "İşbirliklerimiz",
-                "title": "Güçlü <span class=\"highlight\">İş Ortaklıkları</span>",
+                "title": "Güçlü [İş Ortaklıkları]",
                 "description": "Birlikte çalıştığımız değerli markalar ve başarılı projelerimiz"
             },
             "partners": {
@@ -366,7 +366,7 @@
         "contact": {
             "hero": {
                 "label": "İletişim",
-                "title": "Bizimle <span class=\"highlight\">İletişime</span> Geçin",
+                "title": "Bizimle [İletişime] Geçin",
                 "description": "Projeleriniz hakkında konuşmak, sorularınızı yanıtlamak veya teklif almak için bize ulaşın."
             },
             "form": {

@@ -3,6 +3,7 @@ import { useInView } from '../hooks/useInView'
 import siteData from '../data/siteData.json'
 import Icon from '../components/Icon'
 import WaveBackground from '../components/WaveBackground'
+import HighlightText from '../components/HighlightText'
 import './Contact.css'
 
 function Contact() {
@@ -64,7 +65,8 @@ function Contact() {
                 <div className="container">
                     <div className="contact-hero-content">
                         <span className="section-label hero-label-light reveal stagger-1">{hero.label}</span>
-                        <h1 className="hero-title-light reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}>
+                        <h1 className="hero-title-light reveal stagger-2">
+                            <HighlightText text={hero.title} />
                         </h1>
                         <p className="hero-description-light reveal stagger-3">
                             {hero.description}

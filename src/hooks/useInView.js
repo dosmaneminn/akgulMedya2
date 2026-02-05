@@ -1,8 +1,13 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useMemo } from 'react'
 
-export function useInView(options = {}) {
+export function useInView({ threshold = 0.1, rootMargin = '0px 0px -50px 0px' } = {}) {
     const ref = useRef(null)
     const [isInView, setIsInView] = useState(false)
+
+    const observerOptions = useMemo(() => ({
+        threshold,
+        rootMargin,
+    }), [threshold, rootMargin])
 
     useEffect(() => {
         const element = ref.current
@@ -16,11 +21,7 @@ export function useInView(options = {}) {
                     observer.unobserve(element)
                 }
             },
-            {
-                threshold: options.threshold || 0.1,
-                rootMargin: options.rootMargin || '0px 0px -50px 0px',
-                ...options
-            }
+            observerOptions
         )
 
         observer.observe(element)
@@ -28,7 +29,7 @@ export function useInView(options = {}) {
         return () => {
             observer.unobserve(element)
         }
-    }, [options.threshold, options.rootMargin])
+    }, [observerOptions])
 
     return [ref, isInView]
 }

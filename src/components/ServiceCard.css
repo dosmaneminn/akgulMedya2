@@ -21,19 +21,19 @@
 
 .service-direction-card {
     background: var(--bg-card);
-    border: 1px solid rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(52, 211, 153, 0.1);
 }
 
 .service-card-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(45, 212, 191, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.15) 0%, rgba(45, 212, 191, 0.1) 100%);
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    color: var(--green-500);
+    color: var(--emerald-400);
     transition: all var(--transition-medium);
 }
 
@@ -57,11 +57,11 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgba(34, 197, 94, 0.1);
+    background: rgba(52, 211, 153, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--green-500);
+    color: var(--emerald-400);
     transition: all var(--transition-medium);
 }
 
@@ -87,7 +87,8 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .service-card-wrapper {
-        min-height: 250px;
+        min-height: 260px;
+        height: 260px;
     }
 
     .service-card-icon {
@@ -101,5 +102,12 @@
 
     .service-card-description {
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card-wrapper {
+        min-height: 220px;
+        height: 220px;
     }
 }
