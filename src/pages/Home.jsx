@@ -51,7 +51,6 @@ function Home() {
             {/* Marquee Section */}
             <section className="marquee-section">
                 <Marquee items={marquee} speed={25} />
-                <Marquee items={marquee} speed={30} reverse={true} />
             </section>
 
             {/* About Preview Section */}

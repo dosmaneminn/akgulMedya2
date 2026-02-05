@@ -261,8 +261,8 @@
 
 /* Marquee Section */
 .marquee-section {
-    padding: 40px 0;
-    background: var(--bg-dark);
+    padding: 24px 0;
+    background: var(--bg-light);
     display: flex;
     flex-direction: column;
     gap: 20px;

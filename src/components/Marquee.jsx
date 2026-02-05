@@ -1,6 +1,7 @@
 import './Marquee.css'
 
 function Marquee({ items, speed = 30, reverse = false }) {
+    // Duplicate items for seamless infinite loop animation
     const duplicatedItems = [...items, ...items]
 
     return (

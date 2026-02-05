@@ -1,8 +1,8 @@
 .marquee-container {
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
-    padding: 24px 0;
+    background: var(--bg-light);
+    padding: 16px 0;
     position: relative;
 }
 
@@ -11,7 +11,7 @@
     content: '';
     position: absolute;
     top: 0;
-    width: 150px;
+    width: 80px;
     height: 100%;
     z-index: 2;
     pointer-events: none;
@@ -19,12 +19,12 @@
 
 .marquee-container::before {
     left: 0;
-    background: linear-gradient(90deg, var(--bg-dark) 0%, transparent 100%);
+    background: linear-gradient(90deg, var(--bg-light) 0%, transparent 100%);
 }
 
 .marquee-container::after {
     right: 0;
-    background: linear-gradient(-90deg, var(--bg-darker) 0%, transparent 100%);
+    background: linear-gradient(-90deg, var(--bg-light) 0%, transparent 100%);
 }
 
 .marquee-track {
@@ -48,21 +48,17 @@
 }
 
 .marquee-text {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    font-weight: 700;
-    color: var(--text-light);
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+    font-weight: 400;
+    color: var(--text-medium);
     text-transform: uppercase;
-    letter-spacing: 2px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    letter-spacing: 1px;
 }
 
 .marquee-separator {
-    color: var(--accent);
-    font-size: 1.5rem;
-    opacity: 0.6;
+    color: var(--primary);
+    font-size: 0.8rem;
+    opacity: 0.5;
 }
 
 /* Hover pause effect */

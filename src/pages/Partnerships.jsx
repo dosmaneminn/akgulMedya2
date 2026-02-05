@@ -107,15 +107,6 @@ function Partnerships() {
                                     {renderStars(testimonial.rating)}
                                 </div>
                                 <p className="testimonial-content">"{testimonial.content}"</p>
-                                <div className="testimonial-author">
-                                    <div className="author-avatar">
-                                        {testimonial.name.charAt(0)}
-                                    </div>
-                                    <div className="author-info">
-                                        <h4>{testimonial.name}</h4>
-                                        <span>{testimonial.role} - {testimonial.company}</span>
-                                    </div>
-                                </div>
                             </div>
                         ))}
                     </div>

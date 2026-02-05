@@ -50,10 +50,10 @@
             "image": "/images/services/qr-menu.webp"
         },
         {
-            "id": "drone",
-            "title": "Drone Çekimi",
-            "description": "Profesyonel drone ile havadan çekim hizmetleri, etkileyici görüntüler.",
-            "image": "/images/services/drone.webp"
+            "id": "social-media",
+            "title": "Sosyal Medya Yönetimi",
+            "description": "Sosyal medya hesaplarınızı profesyonel olarak yönetiyoruz.",
+            "image": "/images/services/social-media.webp"
         },
         {
             "id": "web-design",
@@ -62,10 +62,10 @@
             "image": "/images/services/web-design.webp"
         },
         {
-            "id": "production",
-            "title": "Prodüksiyon",
-            "description": "Profesyonel video prodüksiyon, kurgu ve post-prodüksiyon hizmetleri.",
-            "image": "/images/services/production.webp"
+            "id": "meta-ads",
+            "title": "Meta Reklamları",
+            "description": "Facebook ve Instagram reklam kampanyaları ile hedef kitlenize ulaşın.",
+            "image": "/images/services/meta-ads.webp"
         },
         {
             "id": "n8n-automation",
@@ -80,16 +80,16 @@
             "image": "/images/services/photo-video.webp"
         },
         {
-            "id": "social-media",
-            "title": "Sosyal Medya Yönetimi",
-            "description": "Sosyal medya hesaplarınızı profesyonel olarak yönetiyoruz.",
-            "image": "/images/services/social-media.webp"
+            "id": "drone",
+            "title": "Drone Çekimi",
+            "description": "Profesyonel drone ile havadan çekim hizmetleri, etkileyici görüntüler.",
+            "image": "/images/services/drone.webp"
         },
         {
-            "id": "meta-ads",
-            "title": "Meta Reklamları",
-            "description": "Facebook ve Instagram reklam kampanyaları ile hedef kitlenize ulaşın.",
-            "image": "/images/services/meta-ads.webp"
+            "id": "production",
+            "title": "Prodüksiyon",
+            "description": "Profesyonel video prodüksiyon, kurgu ve post-prodüksiyon hizmetleri.",
+            "image": "/images/services/production.webp"
         },
         {
             "id": "seo",
@@ -349,23 +349,14 @@
                 "title": "İş Ortaklarımız Ne Diyor?",
                 "items": [
                     {
-                        "name": "Mehmet Yılmaz",
-                        "company": "MEZECİM",
-                        "role": "İşletme Sahibi",
-                        "content": "AkgulMedya ile çalışmak harika bir deneyimdi. QR menü sistemimiz sayesinde müşterilerimize modern bir deneyim sunuyoruz. Hızlı ve profesyonel hizmet için teşekkürler!",
+                        "content": "QR menü sistemimiz sayesinde müşterilerimize modern bir deneyim sunuyoruz. Hızlı ve profesyonel hizmet için teşekkürler!",
                         "rating": 5
                     },
                     {
-                        "name": "Ayşe Kaya",
-                        "company": "LUMELLA DESIGN",
-                        "role": "Kurucu",
                         "content": "Sosyal medya yönetimi ve web tasarımı konusunda gerçekten profesyonel bir ekip. Markamızın dijital varlığını güçlendirdiler.",
                         "rating": 5
                     },
                     {
-                        "name": "Ali Demir",
-                        "company": "ALP ŞARKÜTERİ",
-                        "role": "Genel Müdür",
                         "content": "Drone çekimleri ve prodüksiyon kalitesi beklentilerimizin çok üzerindeydi. Kesinlikle tavsiye ediyorum!",
                         "rating": 5
                     }
