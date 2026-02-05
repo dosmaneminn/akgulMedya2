@@ -47,73 +47,73 @@
             "id": "qr-menu",
             "title": "QR Menü",
             "description": "Restoranlar ve kafeler için modern, interaktif QR menü çözümleri sunuyoruz.",
-            "image": "/images/services/qr-menu.png"
+            "image": "/images/services/qr-menu.webp"
         },
         {
             "id": "drone",
             "title": "Drone Çekimi",
             "description": "Profesyonel drone ile havadan çekim hizmetleri, etkileyici görüntüler.",
-            "image": "/images/services/drone.png"
+            "image": "/images/services/drone.webp"
         },
         {
             "id": "web-design",
             "title": "Web Tasarımı",
             "description": "Modern, responsive ve kullanıcı dostu web siteleri tasarlıyoruz.",
-            "image": "/images/services/web-design.png"
+            "image": "/images/services/web-design.webp"
         },
         {
             "id": "production",
             "title": "Prodüksiyon",
             "description": "Profesyonel video prodüksiyon, kurgu ve post-prodüksiyon hizmetleri.",
-            "image": "/images/services/production.png"
+            "image": "/images/services/production.webp"
         },
         {
             "id": "n8n-automation",
             "title": "N8N Otomasyonları",
             "description": "İş süreçlerinizi otomatikleştiren n8n workflow çözümleri.",
-            "image": "/images/services/automation.png"
+            "image": "/images/services/automation.webp"
         },
         {
             "id": "photo-video",
             "title": "Fotoğraf & Video Çekimi",
             "description": "Profesyonel fotoğraf ve video çekimi hizmetleri.",
-            "image": "/images/services/photo-video.png"
+            "image": "/images/services/photo-video.webp"
         },
         {
             "id": "social-media",
             "title": "Sosyal Medya Yönetimi",
             "description": "Sosyal medya hesaplarınızı profesyonel olarak yönetiyoruz.",
-            "image": "/images/services/social-media.png"
+            "image": "/images/services/social-media.webp"
         },
         {
             "id": "meta-ads",
             "title": "Meta Reklamları",
             "description": "Facebook ve Instagram reklam kampanyaları ile hedef kitlenize ulaşın.",
-            "image": "/images/services/meta-ads.png"
+            "image": "/images/services/meta-ads.webp"
         },
         {
             "id": "seo",
             "title": "SEO",
             "description": "Arama motoru optimizasyonu ile organik trafiğinizi artırıyoruz.",
-            "image": "/images/services/seo.png"
+            "image": "/images/services/seo.webp"
         },
         {
             "id": "google-reviews",
             "title": "Google Yorum Desteği",
             "description": "Google işletme profilinizi güçlendirin, yorum stratejisi oluşturun.",
-            "image": "/images/services/google-reviews.png"
+            "image": "/images/services/google-reviews.webp"
         },
         {
             "id": "logo-design",
             "title": "Logo Tasarımı",
             "description": "Markanızı yansıtan özgün ve profesyonel logo tasarımları.",
-            "image": "/images/services/logo-design.png"
+            "image": "/images/services/logo-design.webp"
         },
         {
             "id": "brand-management",
             "title": "Marka Yönetimi",
             "description": "Marka stratejisi, konumlandırma ve kurumsal kimlik yönetimi.",
-            "image": "/images/services/brand-management.png"
+            "image": "/images/services/brand-management.webp"
         }
     ],
     "contact": {
