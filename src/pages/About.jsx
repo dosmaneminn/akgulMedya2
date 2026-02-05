@@ -48,9 +48,8 @@ function About() {
                             ))}
                         </div>
                         <div className="story-visual reveal stagger-3">
-                            <div className="story-image-placeholder">
-                                <Icon name="briefcase" size={48} strokeWidth={1.5} />
-                                <span>{siteData.siteInfo.name}</span>
+                            <div className="story-image-wrapper">
+                                <img src="/images/logo-yazili.jpeg" alt={siteData.siteInfo.name} className="story-image" />
                             </div>
                         </div>
                     </div>

@@ -21,7 +21,8 @@
 }
 
 .hero-label-light,
-.section-label.hero-label-light {
+.section-label.hero-label-light,
+.hero-label.hero-label-light {
     background: rgba(255, 255, 255, 0.15);
     color: #FFFFFF;
     backdrop-filter: blur(10px);
