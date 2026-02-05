@@ -8,9 +8,10 @@ import './Partnerships.css'
 function Partnerships() {
     const [heroRef, heroVisible] = useInView({ threshold: 0.1 })
     const [partnersRef, partnersVisible] = useInView({ threshold: 0.1 })
+    const [testimonialsRef, testimonialsVisible] = useInView({ threshold: 0.1 })
     const location = useLocation()
 
-    const { hero, partners, cta } = siteData.pages.partnerships
+    const { hero, partners, cta, testimonials } = siteData.pages.partnerships
 
     // Scroll to hash anchor on page load
     useEffect(() => {
@@ -23,6 +24,13 @@ function Partnerships() {
             }
         }
     }, [location.hash])
+
+    // Render star rating
+    const renderStars = (rating) => {
+        return Array.from({ length: 5 }, (_, i) => (
+            <span key={i} className={`star ${i < rating ? 'filled' : ''}`}>★</span>
+        ))
+    }
 
     return (
         <div className="partnerships-page">
@@ -73,6 +81,41 @@ function Partnerships() {
                                     </div>
                                 </div>
                                 <span className="partner-name">{partner.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Testimonials Section */}
+            <section
+                ref={testimonialsRef}
+                className={`testimonials-section section ${testimonialsVisible ? 'visible' : ''}`}
+            >
+                <div className="container">
+                    <div className="section-header">
+                        <span className="section-label reveal stagger-1">{testimonials.label}</span>
+                        <h2 className="reveal stagger-2">{testimonials.title}</h2>
+                    </div>
+                    <div className="testimonials-grid">
+                        {testimonials.items.map((testimonial, index) => (
+                            <div
+                                key={index}
+                                className={`testimonial-card reveal stagger-${index + 1}`}
+                            >
+                                <div className="testimonial-rating">
+                                    {renderStars(testimonial.rating)}
+                                </div>
+                                <p className="testimonial-content">"{testimonial.content}"</p>
+                                <div className="testimonial-author">
+                                    <div className="author-avatar">
+                                        {testimonial.name.charAt(0)}
+                                    </div>
+                                    <div className="author-info">
+                                        <h4>{testimonial.name}</h4>
+                                        <span>{testimonial.role} - {testimonial.company}</span>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>

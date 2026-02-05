@@ -2,44 +2,27 @@ import { useInView } from '../hooks/useInView'
 import ServiceCard from '../components/ServiceCard'
 import { Link } from 'react-router-dom'
 import siteData from '../data/siteData.json'
-import WaveBackground from '../components/WaveBackground'
 import './Services.css'
 
 function Services() {
-    const [heroRef, heroVisible] = useInView({ threshold: 0.1 })
     const [servicesRef, servicesVisible] = useInView({ threshold: 0.1 })
 
-    const { hero, cta } = siteData.pages.services
+    const { cta } = siteData.pages.services
     const services = siteData.services
 
     return (
         <div className="services-page">
-            {/* Hero Section */}
-            <section
-                ref={heroRef}
-                className={`services-hero wave-hero ${heroVisible ? 'visible' : ''}`}
-            >
-                <WaveBackground />
-                <div className="container">
-                    <div className="services-hero-content">
-                        <span className="section-label hero-label-light reveal stagger-1">{hero.label}</span>
-                        <h1 className="hero-title-light reveal stagger-2" dangerouslySetInnerHTML={{ __html: hero.title }}></h1>
-                        <p className="hero-description-light reveal stagger-3">{hero.description}</p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Services Grid Section */}
+            {/* Services Grid Section - Starts Directly */}
             <section
                 ref={servicesRef}
-                className={`services-grid-section section ${servicesVisible ? 'visible' : ''}`}
+                className={`services-grid-section section services-main ${servicesVisible ? 'visible' : ''}`}
             >
                 <div className="container">
                     <div className="services-grid">
                         {services.map((service, index) => (
                             <ServiceCard
                                 key={index}
-                                icon={service.icon}
+                                image={service.image}
                                 title={service.title}
                                 description={service.description}
                                 delay={(index % 4) + 1}

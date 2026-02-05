@@ -100,7 +100,7 @@ function Home() {
                         {services.map((service, index) => (
                             <ServiceCard
                                 key={index}
-                                icon={service.icon}
+                                image={service.image}
                                 title={service.title}
                                 description={service.description}
                                 delay={index + 1}
