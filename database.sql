@@ -2,13 +2,9 @@
 -- AkgulMedya Veritabani
 -- Hostinger MySQL icin
 -- =============================================
-
-CREATE DATABASE IF NOT EXISTS akgulmedya_db
-    CHARACTER SET utf8mb4
-    COLLATE utf8mb4_unicode_ci;
-
-USE akgulmedya_db;
-
+-- NOT: Hostinger'da veritabanini hPanel uzerinden olusturun,
+-- sonra phpMyAdmin'den bu dosyayi import edin.
+-- CREATE DATABASE ve USE komutlari Hostinger'da calismaz.
 -- =============================================
 -- Iletisim Formu Mesajlari
 -- =============================================
